@@ -2,7 +2,11 @@
 @import "bootstrap";
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@font-face {
+font-family: 'bernier';
+src: url('bernier.otf');
 
+}
 
 
 
@@ -365,7 +369,7 @@ img::-moz-selection {
 .gnome-text {
     max-width: 400px;
     margin: 0 auto;
-    padding:40px;
+    padding-top:40px;
 }
 
 @media (max-width:768px) {
@@ -384,5 +388,18 @@ img::-moz-selection {
 .center {
     text-align: center;
 }
+
+.text-normal {
+    font-family: 'bernier', 'Montserrat','Helvetica Neue',Arial,sans-serif;
+    font-size: 30px;
+    color: #000;
+}
+
+
+
+
+
+
+
 
 
