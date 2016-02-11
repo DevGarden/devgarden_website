@@ -1,0 +1,120 @@
+<body class="bg-faded">
+  <header id="first">
+    <div class="header-content">
+        <div class="inner center">
+            <%= image_tag('gnomelee.png', class: 'gnome img-responsive') %>
+
+            <%= image_tag('DevGarden_Text.png', class: 'gnome-text img-responsive') %>
+            
+            <h4 class="text-normal">Software never had it so good.</h4>
+            
+        </div>
+    </div>
+</header>
+<!-- <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <button class="navbar-toggler btn btn-lg nav-top btn-default hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            ☰
+        </button>
+        
+        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#one">Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#two">Flexbox</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#three">5 Tiers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#four">More</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" data-toggle="modal" title="A free Bootstrap theme" href="#aboutModal">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+
+
+
+ <!--scripts loaded here-->
+  <script>
+    // sandbox disable popups
+    if (window.self !== window.top && window.name!="view1") {;
+      window.alert = function(){/*disable alert*/};
+      window.confirm = function(){/*disable confirm*/};
+      window.prompt = function(){/*disable prompt*/};
+      window.open = function(){/*disable open*/};
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        if(links[i].href.indexOf('#')!=-1) {
+          links[i].addEventListener("click", function(e) {
+          console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash=="#") {
+                  e.preventDefault();
+                  return false;
+                }
+                else {
+                  /*
+                  var el = document.getElementById(this.hash.replace(/#/, ""));
+                  if (el) {
+                    el.scrollIntoView(true);
+                  }
+                  */
+                }
+              }
+              return false;
+          })
+        }
+      }
+    }, false);
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+   <script>
+  (function($) {
+    "use strict";
+
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 60
+    });
+
+    new WOW().init();
+    
+    $('a.page-scroll').bind('click', function(event) {
+        var $ele = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($ele.attr('href')).offset().top - 60)
+        }, 1450, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    
+    $('#collapsingNavbar li a').click(function() {
+        /* always close responsive nav after click */
+        $('.navbar-toggler:visible').click();
+    });
+
+    $('#galleryModal').on('show.bs.modal', function (e) {
+       $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+    });
+
+})(jQuery);
+  </script>
