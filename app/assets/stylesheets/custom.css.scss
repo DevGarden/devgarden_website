@@ -439,5 +439,14 @@ text-align: left;
 }
 
 
+.gnome-top {
+    padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .drawer-right .drawer-controls {
+        margin-left: -30% !important;
+    }
+}
 
 
