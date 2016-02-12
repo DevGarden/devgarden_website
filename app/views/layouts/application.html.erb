@@ -8,12 +8,16 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body class="bg-faded has-drawer">
+<body class="bg-faded">
+
 	<div class="container">
+			<nav class="navbar navbar-light bg-faded">
+				<%= render 'layouts/menu' %>
+			</nav>
 
 			<%= yield %>
 
-			<%= render 'layouts/menu' %>
+		
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
