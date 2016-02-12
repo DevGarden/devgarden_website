@@ -1,0 +1,29 @@
+<div id="drawerExample" class="drawer drawer-right dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
+        <div class="drawer-controls">
+            <%= link_to 'Client Log In', "#login", :class => 'pull-right btn btn-lg sign-in btn-warning', "data-toggle" => "modal" %>
+            <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn drawer-tog btn-lg">☰</a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title"></h2>
+            </div>
+            <div class="drawer-body">
+                <p>
+                    It's a pleasure to meet you.
+                </p>
+                
+            </div>
+            <ul class="drawer-nav">
+        
+                
+                <li role="presentation"><h4><%= link_to 'Home', root_path %></h4></li>
+                <li role="presentation"><h4><%= link_to 'Contact Us', contacts_path %></h4></li>
+            </ul>
+            <div class="drawer-footer">
+                
+            </div>
+        </div>
+</div>
+    
+
+    

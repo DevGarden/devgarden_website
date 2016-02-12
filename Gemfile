@@ -15,6 +15,7 @@ gem 'omniauth-google'
 
 #forms
 gem 'simple_form'
+gem 'mail_form'
 
 #styling
 gem 'font-awesome-rails'
