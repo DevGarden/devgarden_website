@@ -447,6 +447,17 @@ text-align: left;
     .drawer-right .drawer-controls {
         margin-left: -30% !important;
     }
+
+}
+
+@media(max-width: 500px) {
+    .gnome-top {
+        padding-top: 10px;
+    }
+
+    .top {
+        padding-top: 50px;
+    }
 }
 
 .opaque-bg {
