@@ -8,6 +8,7 @@ gem 'rails', '4.2.5'
 #authorization shit
 gem 'therubyracer'
 gem 'devise'
+gem 'devise_invitable'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -22,10 +23,28 @@ gem 'font-awesome-rails'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'bootswatch-rails'
 
+gem 'high_voltage'
+
+gem 'haml-rails'
 
 #pagination shit
-gem 'will_paginate',           '3.0.7'
-gem 'bootstrap-will_paginate', '0.0.10'
+gem 'kaminari'
+gem 'ransack'
+
+gem 'mysql2'
+gem 'puma'
+gem 'upmin-admin'
+gem 'redis-rails'
+
+gem 'paperclip'
+
+# Expose our API with Grape and Swagger
+gem 'grape-swagger-rails', github: "ruby-grape/grape-swagger-rails"
+gem 'grape-jbuilder'
+
+# Consume other API's with Faraday
+gem 'faraday'
+gem 'hashie'
 
 #seeding database with shit
 gem 'faker',        '1.4.2'
@@ -53,6 +72,26 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+
+  gem 'better_errors'
+  gem 'annotate'
+
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+
+  gem 'capistrano', '~> 3.0.1'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1.0'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'html2haml'
+  gem 'letter_opener'
+  gem 'letter_opener_web', '~> 1.2.0'
+  gem 'quiet_assets'
+  gem 'rails_layout'
 end
 
 group :test do
@@ -62,9 +101,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma',           '2.11.1'
 end
 
 

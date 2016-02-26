@@ -1,0 +1,21 @@
+.page-header
+  = link_to clients_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_client_path(@client), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show client
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @client.name
+  %dt Website url:
+  %dd= @client.website_url
+
+
+%h3 Projects
+-@client.projects.each do |p| 
+  =render "projects/line_item", project: p
+%hr 
+=link_to "Create New", new_project_path(client_id: @client.id), class: "btn btn-success"

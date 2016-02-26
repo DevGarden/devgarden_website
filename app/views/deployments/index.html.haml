@@ -1,0 +1,30 @@
+.page-header
+  = link_to new_deployment_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Deployment
+  %h1 Listing deployments
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Project
+        %th Phase
+        %th Url
+        %th Server ip
+        %th Domain name
+        %th
+        %th
+        %th
+
+    %tbody
+      - @deployments.each do |deployment|
+        %tr
+          %td= deployment.project_id
+          %td= deployment.phase
+          %td= deployment.url
+          %td= deployment.server_ip
+          %td= deployment.domain_name
+          %td= link_to 'Show', deployment
+          %td= link_to 'Edit', edit_deployment_path(deployment)
+          %td= link_to 'Destroy', deployment, data: { confirm: 'Are you sure?' }, method: :delete

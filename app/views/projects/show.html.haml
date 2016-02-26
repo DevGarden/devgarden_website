@@ -1,0 +1,28 @@
+.page-header
+  = link_to projects_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_project_path(@project), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show project
+
+%dl.dl-horizontal
+  %dt Client:
+  %dd= @project.client_id
+  %dt Name:
+  %dd= @project.name
+  %dt Github repo:
+  %dd= @project.github_repo
+  %dt Jira project:
+  %dd= @project.jira_project_id
+  %dt Toggle project:
+  %dd= @project.toggle_project_id
+  %dt Google drive url:
+  %dd= @project.google_drive_url
+
+%h3 Deployments
+-@project.deployments.each do |d| 
+  =render "deployment/line_item", deployment: d
+%hr 
+=link_to "Create New", new_deployment_path(project_id: @project.id), class: "btn btn-success"

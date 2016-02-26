@@ -1,0 +1,20 @@
+.page-header
+  = link_to deployments_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_deployment_path(@deployment), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show deployment
+
+%dl.dl-horizontal
+  %dt Project:
+  %dd= @deployment.project_id
+  %dt Phase:
+  %dd= @deployment.phase
+  %dt Url:
+  %dd= @deployment.url
+  %dt Server ip:
+  %dd= @deployment.server_ip
+  %dt Domain name:
+  %dd= @deployment.domain_name
