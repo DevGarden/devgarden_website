@@ -34,12 +34,21 @@
 #
 
 class User < ActiveRecord::Base
+  enum role: [:user, :vip, :admin, :super_admin]
+  after_initialize :set_default_role, :if => :new_record?
+
+  belongs_to :site, required: false
+
+  def set_default_role
+    self.role ||= :user
+  end
+
+  def admin?
+    ["admin", "super_admin"].include? role
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :confirmable, :invitable,
+  devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  has_many :client_users 
-  has_many :clients, through: :client_users 
-           
 end

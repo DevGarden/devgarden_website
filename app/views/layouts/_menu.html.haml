@@ -1,0 +1,17 @@
+#drawerExample.drawer.drawer-right.dw-xs-10.dw-sm-6.dw-md-4.fold{"aria-labelledby" => "drawerExample"}
+  .drawer-controls
+    .opaque-bg
+      %a.btn.drawer-tog.btn-lg{"aria-controls" => "drawerExample", "aria-foldedopen" => "false", "data-toggle" => "drawer", :href => "#drawerExample"} ☰
+  .drawer-contents
+    .drawer-heading
+      %h2.drawer-title
+    .drawer-body
+      %p
+        It's a pleasure to meet you.
+      = link_to 'Log In', "#login", :class => 'btn btn-lg sign-in btn-warning', "data-toggle" => "modal"
+    %ul.drawer-nav
+      %li{:role => "presentation"}
+        %h4= link_to 'Home', root_path
+      %li{:role => "presentation"}
+        %h4= link_to 'Contact Us', contacts_path
+    .drawer-footer

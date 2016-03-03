@@ -1,0 +1,5 @@
+.header-content.top
+  - flash.each do |key, value|
+    .inner.center
+      %h3= value
+      = link_to 'Home',  root_path, :class =>'btn btn-lg btn-success'

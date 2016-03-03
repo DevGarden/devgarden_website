@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+ 
   resources :deployments
   resources :projects
   resources :clients
+  
   mount Upmin::Engine => '/admin'
 
   mount API => '/'
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
     end
 
     unauthenticated do
-      root 'home#index', as: :unauthenticated_root
+      root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
 
