@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ruby-grape/grape-swagger-rails.git
-  revision: 11671d3df9df2db2c1494a8d4dd46625e205e9ad
+  revision: 59372ab7d7227717258543348b4a1326ccc6503a
   specs:
     grape-swagger-rails (0.2.1)
       grape-swagger (>= 0.7.2)
@@ -45,11 +45,17 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    annotate (2.6.10)
-      activerecord (>= 3.2, <= 4.3)
+    amazon-ec2 (0.9.17)
+      xml-simple (>= 1.0.12)
+    annotate (2.7.0)
+      activerecord (>= 3.2, < 6.0)
       rake (~> 10.4)
     ansi (1.5.0)
     arel (6.0.3)
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -88,12 +94,12 @@ GEM
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
-    chartkick (1.4.1)
+    chartkick (1.4.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    coderay (1.1.0)
+    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (4.1.1)
@@ -104,12 +110,12 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     columnize (0.9.0)
-    concurrent-ruby (1.0.0)
+    concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (3.5.5)
+    devise (3.5.6)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -125,7 +131,7 @@ GEM
     execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
+    factory_girl_rails (4.6.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     faker (1.4.2)
@@ -133,8 +139,8 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
-    font-awesome-rails (4.5.0.0)
-      railties (>= 3.2, < 5.0)
+    font-awesome-rails (4.5.0.1)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -199,6 +205,7 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    httpclient (2.7.1)
     i18n (0.7.0)
     ice_nine (0.11.2)
     jbuilder (2.4.1)
@@ -209,7 +216,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    jwt (1.5.2)
+    jwt (1.5.1)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -221,9 +228,9 @@ GEM
       letter_opener (~> 1.0)
       rails (>= 3.2)
     libv8 (3.16.14.13)
-    listen (3.0.5)
+    listen (3.0.6)
       rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
+      rb-inotify (>= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.10)
@@ -233,7 +240,7 @@ GEM
       actionmailer (>= 3.2, < 5)
       activemodel (>= 3.2, < 5)
     method_source (0.8.2)
-    mime-types (2.99)
+    mime-types (2.99.1)
     mimemagic (0.3.0)
     mini_backtrace (0.1.3)
       minitest (> 1.2.0)
@@ -248,23 +255,27 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    mumboe-soap4r (1.5.8.7)
+      httpclient (>= 2.1.1)
     mysql2 (0.4.3)
-    nenv (0.2.0)
+    nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
+    nettica (0.4.0)
+      mumboe-soap4r
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    oauth (0.4.7)
-    oauth2 (1.0.0)
+    oauth (0.5.1)
+    oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
-      jwt (~> 1.0)
+      jwt (~> 1.0, < 1.5.2)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
-      rack (~> 1.2)
+      rack (>= 1.2, < 3)
     omniauth (1.3.1)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
@@ -296,8 +307,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
+    puma (3.0.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -330,7 +340,7 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_layout (1.0.29)
-    rails_serve_static_assets (0.0.4)
+    rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.4)
     railties (4.2.5)
       actionpack (= 4.2.5)
@@ -345,7 +355,7 @@ GEM
       i18n
       polyamorous (~> 1.2)
     rb-fsevent (0.9.7)
-    rb-inotify (0.9.5)
+    rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
@@ -373,7 +383,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.2)
+    rspec-core (3.4.3)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -381,7 +391,7 @@ GEM
     rspec-mocks (3.4.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
-    rspec-rails (3.4.1)
+    rspec-rails (3.4.2)
       actionpack (>= 3.0, < 4.3)
       activesupport (>= 3.0, < 4.3)
       railties (>= 3.0, < 4.3)
@@ -390,6 +400,11 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    rubber (1.15.0)
+      amazon-ec2 (>= 0.9.17)
+      aws-s3
+      capistrano (>= 2.4.0)
+      nettica
     ruby-progressbar (1.7.5)
     ruby_parser (3.8.1)
       sexp_processor (~> 4.1)
@@ -413,14 +428,17 @@ GEM
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.1)
+    sprockets-rails (3.0.4)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.9)
-    sshkit (1.8.1)
+    sshkit (1.3.0)
       net-scp (>= 1.1.2)
-      net-ssh (>= 2.8.0)
+      net-ssh
+      term-ansicolor
+    term-ansicolor (1.3.2)
+      tins (~> 1.0)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
@@ -430,6 +448,7 @@ GEM
     tilt-jbuilder (0.7.1)
       jbuilder
       tilt (>= 1.3.0, < 3)
+    tins (1.8.2)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -457,6 +476,7 @@ GEM
       binding_of_caller (= 0.7.3.pre1)
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
@@ -499,6 +519,7 @@ DEPENDENCIES
   mini_backtrace (= 0.1.3)
   minitest-reporters (= 1.0.5)
   mysql2
+  net-ssh
   omniauth
   omniauth-facebook
   omniauth-google
@@ -512,6 +533,7 @@ DEPENDENCIES
   ransack
   redis-rails
   rspec-rails
+  rubber
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
