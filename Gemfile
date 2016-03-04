@@ -69,6 +69,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'net-ssh'
 gem 'rubber'
+gem 'yui-compressor'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
