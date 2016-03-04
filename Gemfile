@@ -80,6 +80,7 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'capistrano', '~> 3.0.1'
+  gem 'capistrano3-puma'
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano-rails-console'

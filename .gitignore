@@ -17,4 +17,5 @@
 /tmp
 
 .db_created
+.database.yml
 

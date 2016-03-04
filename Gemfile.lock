@@ -85,6 +85,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     chartkick (1.4.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -469,6 +472,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.1.0)
   capistrano-rails-console
   capistrano-rvm (~> 0.1.1)
+  capistrano3-puma
   coffee-rails (~> 4.1.0)
   devise
   devise_invitable
