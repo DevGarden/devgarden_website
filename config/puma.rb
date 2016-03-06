@@ -8,14 +8,14 @@ daemonize
 prune_bundler
 
 app_dir = File.expand_path("../..", __FILE__)
-shared_dir = "#{app_dir}/shared"
+shared_dir = "/home/deploy/apps/devgarden-website/shared"
 
 # Default to production
 rails_env = ENV['RAILS_ENV'] || "production"
 environment rails_env
 
 # Set up socket location
-bind "unix://#{shared_dir}/sockets/puma.sock"
+bind "unix:///home/deploy/apps/devgarden-website/sockets/puma.sock"
 
 # Logging
 stdout_redirect "log/puma.log", "log/puma.log", true
