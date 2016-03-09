@@ -1,5 +1,5 @@
 # Change these
-server '52.25.73.70', port: 80, roles: [:web, :app, :db], primary: true
+server '52.25.73.70', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:DevGarden/devgarden_website.git'
 set :application,     'devgarden-website'
