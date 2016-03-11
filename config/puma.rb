@@ -10,9 +10,6 @@ prune_bundler
 app_dir = File.expand_path("../..", __FILE__)
 shared_dir = "/home/deploy/apps/devgarden-website/shared"
 
-# Default to production
-rails_env = ENV['RAILS_ENV'] || "production"
-environment rails_env
 
 # Set up socket location
 bind "unix:/home/deploy/apps/devgarden-website/shared/tmp/sockets/puma.sock"
