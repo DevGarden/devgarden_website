@@ -489,3 +489,31 @@ text-align: center;
     padding: 25px;
 }
 
+.cover-container {
+    background-color: #7A4BF8;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+
+.cover-heading {
+    color: #fff;
+    padding-top: 150px;
+}
+
+@media (max-width: 768px) {
+    .cover-heading {
+        padding-top: 75px;
+    }
+}
+
+.fp-nav {
+    background-color: #7A4BF8;
+}
+
+.navbar-brand {
+   height: 150px;
+}
+
+

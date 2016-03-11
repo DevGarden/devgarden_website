@@ -67,9 +67,9 @@ cloud_providers:
     # NOTE: for some reason Capistrano requires you to have both the public and
     # the private key in the same folder, the public key should have the
     # extension ".pub".  The easiest way to get your hand on this is to create the
-    # public key from the private key: ssh-keygen -y -f gsg-keypair > gsg-keypair.pub
+    # public key from the private key: ssh-keygen -y -f rsa-APKAJDQGZI74L6CFQH6A > rsa-APKAJDQGZI74L6CFQH6A.pub
     #
-    key_name: rsa-APKAJDQGZI74L6CFQH6A
+    key_name: pk-APKAIXCKJCLRRVQRICQA
     key_file: "#{Dir[(File.expand_path('~') rescue '/root') + '/.ec2/*' + cloud_providers.aws.key_name].first}"
 
     # OPTIONAL: Needed for bundling a running instance using rubber:bundle

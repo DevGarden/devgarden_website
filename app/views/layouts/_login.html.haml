@@ -1,5 +1,9 @@
-    
-%div.site-wrapper.top
+%nav.fp-nav
+  .container
+    = link_to image_tag('gnomelee.png', :class => 'navbar-brand'), root_path
+    =link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"     
+
+%div.site-wrapper
 
   %div.site-wrapper-inner
     
@@ -7,11 +11,11 @@
     %div.cover-container
       = render 'layouts/messages'
 
-      %div.inner.cover.center
-        %h1.cover-heading.space Welcome to DevGarden.
+      %div.inner.cover.center.container
+        %h1.cover-heading.space Welcome to CrushTopia. A land of magic and great software.
         
         %p.lead 
-          =link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning', "data-toggle" => "modal"
+          
     %div{:class => 'modal fade', :id => 'sign-in'}
       %div.modal-dialog
         %div.modal-content
@@ -20,6 +24,15 @@
               
             %div.modal-body
               = render 'layouts/signin'
+    %div.container          
+      %div.info
+        %div.col-md-4
+          %h3 title
+        %div.col-md-4
+          %h3 title
+        %div.col-md-4
+          %h3 title
+
 
 
 
