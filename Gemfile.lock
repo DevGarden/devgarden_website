@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ruby-grape/grape-swagger-rails.git
-  revision: 59372ab7d7227717258543348b4a1326ccc6503a
+  revision: b8b5981c69ce22886b93160bb67f773a72ed24f1
   specs:
     grape-swagger-rails (0.2.1)
       grape-swagger (>= 0.7.2)
@@ -45,22 +45,16 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    amazon-ec2 (0.9.17)
-      xml-simple (>= 1.0.12)
     annotate (2.7.0)
       activerecord (>= 3.2, < 6.0)
       rake (~> 10.4)
     ansi (1.5.0)
     arel (6.0.3)
-    aws-s3 (0.6.3)
-      builder
-      mime-types
-      xml-simple
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    bcrypt (3.1.10)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -86,8 +80,8 @@ GEM
     capistrano-rails (1.1.6)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-rails-console (0.5.2)
-      capistrano (>= 3.0.0, < 4.0.0)
+    capistrano-rails-console (1.0.2)
+      capistrano (>= 3.1.0, < 4.0.0)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
@@ -144,7 +138,7 @@ GEM
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    grape (0.14.0)
+    grape (0.15.0)
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -205,14 +199,13 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
-    httpclient (2.7.1)
     i18n (0.7.0)
     ice_nine (0.11.2)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    jquery-rails (4.1.0)
-      rails-dom-testing (~> 1.0)
+    jquery-rails (4.1.1)
+      rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
@@ -255,15 +248,11 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mumboe-soap4r (1.5.8.7)
-      httpclient (>= 2.1.1)
     mysql2 (0.4.3)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (3.0.2)
-    nettica (0.4.0)
-      mumboe-soap4r
+    net-ssh (2.9.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)
@@ -307,7 +296,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.0.2)
+    puma (3.1.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -383,7 +372,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.3)
+    rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -400,11 +389,6 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubber (1.15.0)
-      amazon-ec2 (>= 0.9.17)
-      aws-s3
-      capistrano (>= 2.4.0)
-      nettica
     ruby-progressbar (1.7.5)
     ruby_parser (3.8.1)
       sexp_processor (~> 4.1)
@@ -433,7 +417,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.9)
-    sshkit (1.8.1)
+    sshkit (1.9.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     therubyracer (0.12.2)
@@ -472,7 +456,6 @@ GEM
       binding_of_caller (= 0.7.3.pre1)
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    xml-simple (1.1.5)
     yui-compressor (0.12.0)
 
 PLATFORMS
@@ -484,7 +467,7 @@ DEPENDENCIES
   bootstrap-sass (= 3.2.0.0)
   bootswatch-rails
   byebug (= 3.4.0)
-  capistrano (~> 3.1)
+  capistrano
   capistrano-bundler
   capistrano-rails (~> 1.1.3)
   capistrano-rails-console
@@ -516,7 +499,7 @@ DEPENDENCIES
   mini_backtrace (= 0.1.3)
   minitest-reporters (= 1.0.5)
   mysql2
-  net-ssh
+  net-ssh (~> 2.6)
   omniauth
   omniauth-facebook
   omniauth-google
@@ -530,7 +513,6 @@ DEPENDENCIES
   ransack
   redis-rails
   rspec-rails
-  rubber
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form

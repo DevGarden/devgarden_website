@@ -67,8 +67,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'net-ssh'
-gem 'rubber'
+gem 'net-ssh', '~> 2.6'
+
 gem 'yui-compressor'
 
 group :development, :test do
@@ -83,7 +83,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 
-  gem 'capistrano', '~> 3.1'
+  gem 'capistrano'
   gem 'capistrano3-puma'
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1.3'
