@@ -71,6 +71,8 @@ gem 'net-ssh', '~> 2.6'
 
 gem 'yui-compressor'
 
+gem 'skrollr-rails'
+
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'

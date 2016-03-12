@@ -1,8 +1,3 @@
-%nav.fp-nav
-  .container
-    = link_to image_tag('gnomelee.png', :class => 'navbar-brand'), root_path
-    =link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"     
-
 %div.site-wrapper
 
   %div.site-wrapper-inner
@@ -12,7 +7,11 @@
       = render 'layouts/messages'
 
       %div.inner.cover.center.container
-        %h1.cover-heading.space Welcome to CrushTopia. A land of magic and great software.
+        = link_to "devgarden", root_path, :class => 'logo navbar-brand'
+        = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"  
+        .animated.fadeInUp
+          %h1.cover-heading.space Welcome to CrushTopia. 
+          %h3.white A land of magic and great software.
         
         %p.lead 
           
@@ -26,12 +25,14 @@
               = render 'layouts/signin'
     %div.container          
       %div.info
-        %div.col-md-4
-          %h3 title
-        %div.col-md-4
-          %h3 title
-        %div.col-md-4
-          %h3 title
+        %div.col-md-6.col-md-offset-3.center
+          %h2 We take a no-bullshit, full-transparency approach to software development.
+          %p We keep clients in the know with our proprietary portal. You'll see exactly what you're getting. Tasks, timing, staging environments, billing.
+          %p All in one.
+        
+
+
+       
 
 
 
