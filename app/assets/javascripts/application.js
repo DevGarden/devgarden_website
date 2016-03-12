@@ -17,5 +17,4 @@
 //= require skrollr
 //= require skrollr.ie
 //= require skrollr.stylesheets
-//= require skrollr-decks.js
 //= require_tree .
