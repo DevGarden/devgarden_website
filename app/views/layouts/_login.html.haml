@@ -1,17 +1,31 @@
 %div.site-wrapper
 
+  :javascript
+    new WOW().init();
+
+    
+
+
   %div.site-wrapper-inner
     
 
     %div.cover-container
-      = render 'layouts/messages'
-
-      %div.inner.cover.center.container
+      
+      .container
         = link_to "devgarden", root_path, :class => 'logo navbar-brand'
         = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"  
+        
+
+      %div.inner.cover.center.container
+        = render 'layouts/messages'
+        
         .animated.fadeInUp
-          %h1.cover-heading.space.fp-heading Welcome to CrushTopia. 
+          %h1.cover-heading.space 
+            Welcome to 
+            %span CrushTopia. 
           %h3.white A land of magic and great software.
+          
+          %i.scroll.fa.fa-chevron-down{'href' => '#first'}
         
         %p.lead 
           
@@ -23,17 +37,97 @@
               
             %div.modal-body
               = render 'layouts/signin'
-    %div.container          
-      %div.info
-        %div.col-md-6.col-md-offset-3.center
-          %h2.fp-heading We take a no-bullshit, full-transparency approach to software development.
-          %p We keep clients in the know with our proprietary portal. You'll see exactly what you're getting. Tasks, timing, staging environments, billing.
-          %p All in one.
         
+    / %div.col-md-12.fp-ht
+    /   .container.center
+    /     %h2 We take a no-bullshit, full-transparency approach to software development.
+    /     %h3 We keep clients in the know with our proprietary portal. You'll see exactly what you're getting. Tasks, timing, staging environments, billing.
+    /     %h3 All in one.
+    %div.slide-one.col-md-12.fp-ht.wow.slideInLeft{"data-wow-delay" =>"0.15s"}
+      .container
+        .row
+          .col-md-3.mob-center
+            %i.thumb.fa.fa-thumbs-o-up
+          .col-md-9
+            %h2.pink Doing business with us is easy.​​
+            %h3 We are a force multiplier for your business goals. We bring you effective, efficient processes throughout development with no red tape or wasted time.
+
+    %div.col-md-12.fp-ht
+      .container.pull-right.wow.slideInRight{"data-wow-delay" =>"0.15s"}
+        .row
+          .col-md-9
+            %h2.purple Iterative development from concept to deployment.​
+            %h3  We’re builders and problem solvers at heart with a bias towards action. We strive to get a working prototype into your hands fast​, that allows you to implement, iterate, and re­deploy better and better products.
+          .col-md-3.mob-center
+            %i.rocket.fa.fa-rocket
+
+    %div.col-md-12.fp-ht.wow.slideInLeft{"data-wow-delay" =>"0.15s"}
+      .container
+        .row
+          .col-md-3.mob-center
+            %i.cogs.fa.fa-cogs
+          .col-md-9
+            %h2.pink We know business, technology, and product development.​
+            %h3 The talent across our team is immense. Our development services range from technology consulting and business analysis to QA, application maintenance and solution integration. We have full­stack capabilities.
+    %div.col-md-12.fp-ht.wow.slideInRight
+      .container.pull-right
+        .row
+          .col-md-9
+            %h2.purple We provide scalable, future­proof products.​
+            %h3 We pair agile development with scalable technology, so that when you’re successful, your software adapts. We architect systems that work now and in the future.
+          .col-md-3.mob-center
+            %i.signs.fa.fa-map-signs
+    %div.col-md-12.fp-ht.wow.slideInLeft
+      .container
+        .row
+          .col-md-3.mob-center
+            %i.ring.fa.fa-life-ring
+          .col-md-9
+            %h2.turquoise We work as an extension of your team.​
+            %h3 We don’t pay lip service to collaboration. We sit next to you at your desk. We meet your customers. We work as part of your team to bolster your vision.
+    / %div.col-md-12.fp-ht.wow.slideInRight
+    /   .container.pull-right
+    /     .row
+    /       .col-md-9
+    /         %h2 We do business-case­-centric development.​
+    /         %h3 Our experience in understanding how your development project serves your business helps guide development to meet your business objectives.
+    /       .col-md-3
+    /         %i.thumb.fa.fa-rocket
+    / %div.col-md-12.fp-ht.wow.slideInLeft
+    /   .container
+    /     .row
+    /       .col-md-3
+    /         %i.thumb.fa.fa-rocket
+    /       .col-md-9
+    /         %h2 We operate our company with integrity.​
+    /         %h3 We thrive on open and honest communication. Your business means everything to us. Expect honesty and authenticity through and through.
+    / %div.col-md-12.fp-ht.wow.slideInRight
+    /   .container.pull-right
+    /     .row
+    /       .col-md-9
+    /         %h2 Our process management is transparent and open.​
+    /         %h3 The tools we use are always accessible to you so you know what’s going on with your project.
+    /       .col-md-3
+    /         %i.thumb.fa.fa-rocket
+    / %div.col-md-12.fp-ht.wow.slideInLeft
+    /   .container
+    /     .row
+    /       .col-md-3
+    /         %i.thumb.fa.fa-rocket
+    /       .col-md-9
+    /         %h2 We provide full cycle product support.​
+    /         %h3 The DevGarden software development process supports you at every stage of product evolution – from ideation to product implementation on the cloud, ongoing support, and maintenance.
+
+
+
+
+
+
+
+
 
 
        
-
 
 
 

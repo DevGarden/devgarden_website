@@ -8,5 +8,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    - if signed_in?
+      = render 'layouts/navigation'
+    - else
 
     = yield
+
+    = render 'layouts/footer'
