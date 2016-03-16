@@ -10,9 +10,17 @@
     %div.cover-container
 
       .container
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
         = link_to "devgarden", root_path, :class => 'logo navbar-brand'
-        = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"  
         
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right  
+            %li 
+              = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
 
       %div.inner.cover.center.container
         = render 'layouts/messages'
@@ -27,14 +35,7 @@
         
         %p.lead 
           
-    %div{:class => 'modal fade', :id => 'sign-in'}
-      %div.modal-dialog
-        %div.modal-content
-          %div.modal-header
-            %button{:class => 'close', 'data-dismiss' => 'modal', "aria-label" => "Close"} &times;
-              
-            %div.modal-body
-              = render 'layouts/signin'
+    
         
     / %div.col-md-12.fp-ht
     /   .container.center
@@ -118,7 +119,14 @@
     /         %h2 We provide full cycle product support.​
     /         %h3 The DevGarden software development process supports you at every stage of product evolution – from ideation to product implementation on the cloud, ongoing support, and maintenance.
 
-
+    %div{:class => 'modal fade', :id => 'sign-in'}
+      %div.modal-dialog
+        %div.modal-content
+          %div.modal-header
+            %button{:class => 'close', 'data-dismiss' => 'modal', "aria-label" => "Close"} &times;
+              
+            %div.modal-body
+              = render 'layouts/signin'
 
 
 

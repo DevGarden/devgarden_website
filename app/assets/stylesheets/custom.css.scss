@@ -765,3 +765,8 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     color: $turquoise;
 }
 
+.navbar-toggle .icon-bar {
+    background-color: #ff9800;
+    height: 6px;
+    width: 32px;
+}
