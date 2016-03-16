@@ -683,13 +683,27 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 .fp-ht {
-    height: 80vh;
+    height: 50vh;
     min-height: 400px;
 }
+@media (max-width: 991px) {
+.fp-ht {
+    min-height: 450px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .fp-ht {
+    min-height: 525px;
+    }
+
+}
+
 
 @media (max-width: 500px) {
     .fp-ht {
-    min-height: 725px;
+    min-height: 615px;
     }
 
     .fp-long {
