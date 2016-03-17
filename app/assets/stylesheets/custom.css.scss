@@ -715,7 +715,8 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 500px) {
     .fp-ht {
-    min-height: 550px;
+    height: 40vh
+    min-height: 575px;
     }
 
     .fp-long {
@@ -730,7 +731,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 425px) {
     .fp-ht {
-    min-height: 575px;
+    min-height: 600px;
     }
 
 
