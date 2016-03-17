@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get 'contact' => 'contacts#new'
 
   get 'client' => 'home#client'
-  match '/contacts', to: 'contacts#new', via: ‘get’
+  match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
 
   
