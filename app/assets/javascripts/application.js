@@ -17,4 +17,5 @@
 //= require skrollr
 //= require skrollr.ie
 //= require skrollr.stylesheets
+//= require wow
 //= require_tree .
