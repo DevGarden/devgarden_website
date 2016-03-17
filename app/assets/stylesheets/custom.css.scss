@@ -3,7 +3,7 @@
 @import "bootstrap";
 @import "bootswatch/paper/bootswatch";
 @import "font-awesome";
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 
 $logo: 'Patua One', cursive;
@@ -36,6 +36,10 @@ body {
     webkit-tap-highlight-color: #222;
     top:0;
     margin-bottom: 60px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
 }
 
 /* workaround modal-open padding issue */
@@ -80,7 +84,8 @@ p {
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: 20px;
-    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+    font-weight: 400;
 }
 
 .text-normal {
@@ -610,7 +615,8 @@ text-align: center;
         padding-top: 15vh;
     }
     .logo {
-        margin-top: 10px;
+    margin-top: 15px;
+    height: 45px;
     }
 
     h1 {
@@ -640,9 +646,15 @@ text-align: center;
     color: #fff;    
 }
 
-.logo {
-    font-family: 'bernier';
-    color: #fff;
+
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
 }
 
 .two {
@@ -703,7 +715,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 500px) {
     .fp-ht {
-    min-height: 615px;
+    min-height: 550px;
     }
 
     .fp-long {
@@ -718,7 +730,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 425px) {
     .fp-ht {
-    min-height: 685px;
+    min-height: 575px;
     }
 
 
@@ -797,3 +809,29 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     height: 6px;
     width: 32px;
 }
+
+.contact {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+}
+
+
+.navbar-btn {
+    height: 40px;
+
+
+}
+
+.navbar-nav > li > a {
+    padding-top: 7px;
+}
+
+.close:focus {
+    outline:none
+}
+
+
+
+
+

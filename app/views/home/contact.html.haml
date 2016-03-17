@@ -1,0 +1,14 @@
+%div.cover-container
+  .container
+    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    = link_to image_tag('dg_logo.png', :class => 'logo'), root_path, :class => 'navbar-brand'
+    
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right  
+        %li 
+          = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
+
