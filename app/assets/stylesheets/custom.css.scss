@@ -462,7 +462,7 @@ text-align: center;
 
 
 .top {
-    padding-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 
@@ -521,6 +521,11 @@ text-align: center;
         font-size: 24px;
         color: #fff;
         padding-top: 30px;
+    }
+
+    i.back {
+        font-size: 38px;
+        padding-top: 0px;
     }
 
     h5 {
@@ -695,28 +700,38 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 .fp-ht {
-    height: 50vh;
-    min-height: 400px;
+    min-height: 300px;
+}
+
+.fp-first {
+   
 }
 @media (max-width: 991px) {
 .fp-ht {
+    min-height: 375px;
+    }
+.fp-first {
+   
+    min-height: 700px;
+}
+}
+
+@media (max-width: 700px) {
+    .fp-ht {
     min-height: 450px;
     }
 
 }
 
-@media (max-width: 700px) {
-    .fp-ht {
-    min-height: 525px;
-    }
-
+.fp-first {
+    min-height: 600px;
 }
 
 
 @media (max-width: 500px) {
     .fp-ht {
-    height: 40vh
-    min-height: 575px;
+  
+    min-height: 550px;
     }
 
     .fp-long {
@@ -731,7 +746,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 425px) {
     .fp-ht {
-    min-height: 600px;
+    min-height: 575px;
     }
 
 
@@ -748,6 +763,8 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     background-color: #CB8EBE;
     
 }
+
+
 
 .rocket {
     padding-top: 25px;
@@ -832,7 +849,22 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     outline:none
 }
 
+.pad {
+    margin-top: 10px;
+}
 
+.icons-top {
+    padding-top: 50px;
+    i {
+        font-size: 125px;
+        background: -webkit-linear-gradient(#7A4BF8, #CB8EBE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+}
 
+.fp-title {
+
+}
 
 
