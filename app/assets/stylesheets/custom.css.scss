@@ -16,6 +16,7 @@ $purple: #523795;
 
 $turquoise: #66B8F2;
 
+$blue: #007FFF;
 
 
 @font-face {
@@ -813,6 +814,9 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 .pink {
     color: $pink;
 }
+.blue {
+    color: $blue;
+}
 
 .purple {
     color: $purple;
@@ -863,8 +867,6 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     }
 }
 
-.fp-title {
 
-}
 
 
