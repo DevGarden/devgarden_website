@@ -75,8 +75,8 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Google Analytics
-  GA.tracker = "'UA-75683065-1"
-  
+  GA.tracker = "UA-75683065-1"
+
   # Do not dump schema after migrations.
 
   config.active_record.dump_schema_after_migration = false
