@@ -49,6 +49,8 @@ gem 'hashie'
 #seeding database with shit
 gem 'faker',        '1.4.2'
 
+gem 'google-analytics-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
