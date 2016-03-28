@@ -7,7 +7,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = analytics_init if GoogleAnalytics.valid_tracker?
+    
   %body
     
     - if user_signed_in?
@@ -20,3 +20,5 @@
      
 
     = render 'layouts/footer'
+    - if Rails.env == 'production'
+      = render 'layouts/google_analytics'
