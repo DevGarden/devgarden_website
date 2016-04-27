@@ -1,5 +1,5 @@
 # Change these
-server '52.25.73.70', roles: [:web, :app, :db], primary: true
+server '52.26.99.107', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:DevGarden/devgarden_website.git'
 set :application,     'devgarden-website'
@@ -19,7 +19,7 @@ set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
 set :puma_error_log,  "#{release_path}/log/puma.access.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), 
-                        keys: %w(/Users/nickrroberts/.ssh/devgarden-website.pem), auth_methods: %w(publickey)}
+                        keys: %w(~/.ssh/devgarden_oregon.pem), auth_methods: %w(publickey)}
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
