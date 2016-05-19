@@ -89,12 +89,14 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 
-  gem 'capistrano'
-  gem 'capistrano3-puma'
+  gem 'capistrano', '~> 3.1'
   gem 'capistrano-bundler'
-  gem 'capistrano-rails', '~> 1.1.3'
+  gem 'capistrano3-nginx', '~> 2.0'  
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', github: 'betesh/rails-1', branch: 'master'
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm', '~> 0.1.1'
+
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
