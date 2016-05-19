@@ -1,8 +1,8 @@
 class CreateDeployments < ActiveRecord::Migration
   def change
     create_table :deployments do |t|
-      t.integer :project_id
-      t.string :phase
+      t.belongs_to :project
+      t.integer :phase
       t.string :url
       t.string :server_ip
       t.string :domain_name

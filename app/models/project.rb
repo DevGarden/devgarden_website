@@ -3,11 +3,11 @@
 # Table name: projects
 #
 #  id                :integer          not null, primary key
-#  client_id         :string(255)
+#  client_id         :integer
 #  name              :string(255)
-#  github_repo       :string(255)
-#  jira_project_id   :string(255)
-#  toggle_project_id :string(255)
+#  description       :string(1000)
+#  trello_project_id :string(255)
+#  toggl_project_id  :string(255)
 #  google_drive_url  :string(255)
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null

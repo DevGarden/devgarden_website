@@ -10,9 +10,9 @@
       %tr
         %th Client
         %th Name
-        %th Github repo
-        %th Jira project
-        %th Toggle project
+        %th Deployments
+        %th Trello project
+        %th Toggl project
         %th Google drive url
         %th
         %th
@@ -21,11 +21,13 @@
     %tbody
       - @projects.each do |project|
         %tr
-          %td= project.client_id
-          %td= project.name
-          %td= project.github_repo
-          %td= project.jira_project_id
-          %td= project.toggle_project_id
+          %td= project.client.name
+          %td= link_to project.name, "http://github.com/DevGarden/#{project.name}", target: "_blank"
+          %td
+            -project.deployments.each do |d| 
+              =link_to d.phase.to_s, d.build_url, class: "btn btn-sm #{d.staging? ? 'btn-warning' : 'btn-success'}", target: "_blank"
+          %td= project.trello_project_id
+          %td= project.toggl_project_id
           %td= project.google_drive_url
           %td= link_to 'Show', project
           %td= link_to 'Edit', edit_project_path(project)
