@@ -21,14 +21,21 @@
     %tbody
       - @projects.each do |project|
         %tr
-          %td= project.client.name
+          %td= link_to project.client.name, project.client
           %td= link_to project.name, "http://github.com/DevGarden/#{project.name}", target: "_blank"
           %td
             -project.deployments.each do |d| 
-              =link_to d.phase.to_s, d.build_url, class: "btn btn-sm #{d.staging? ? 'btn-warning' : 'btn-success'}", target: "_blank"
-          %td= project.trello_project_id
+              .col-md-6
+                =render "deployments/line_item", d: d 
+          %td
+            -if project.trello_project_id
+              = link_to project.trello_project_id, project
           %td= project.toggl_project_id
           %td= project.google_drive_url
           %td= link_to 'Show', project
           %td= link_to 'Edit', edit_project_path(project)
           %td= link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete
+
+
+
+

@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
  
-  resources :deployments
-  resources :projects
+  resources :deployments do 
+    member do 
+      get :check_server_status 
+    end
+  end
+
+  resources :projects do 
+    member do 
+      get :trello_board 
+    end
+  end 
+  
   resources :clients
   
   mount Upmin::Engine => '/admin'

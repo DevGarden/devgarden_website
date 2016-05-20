@@ -75,6 +75,7 @@ gem 'yui-compressor'
 
 gem 'skrollr-rails'
 
+gem 'ruby-trello'
 
 
 group :development, :test do
