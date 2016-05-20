@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy, :trello_board]
 
+  layout false, only: [:trello_board] 
+
   # GET /projects
   # GET /projects.json
   def index
