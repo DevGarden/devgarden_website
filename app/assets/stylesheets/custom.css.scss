@@ -224,7 +224,7 @@ footer h4, footer h6 {
     .navbar-default .navbar-brand:focus {
         color: #001A33;
     }
-    
+
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
         color: #001A33;
@@ -241,7 +241,7 @@ footer h4, footer h6 {
     #topNav {
       background-color:#fff;
     }
-    
+
 }
 
 header {
@@ -277,7 +277,7 @@ header .header-content .inner p {
     .icon-lg {
         font-size: 80px;
     }
-    
+
     header {
         min-height: 100%;
     }
@@ -307,7 +307,7 @@ header .header-content .inner p {
         max-width: 80%;
         font-size: 18px;
     }
-    
+
     section {
         min-height: 600px;
         padding: 100px 0;
@@ -333,7 +333,7 @@ textarea {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-    color:#007FFF;
+    color: #007FFF;
 }
 
 .btn.btn-primary:hover {
@@ -495,7 +495,7 @@ text-align: center;
   #footer {
     position: absolute;
     bottom: 0;
-    width: 100%;  
+    width: 100%;
     height: 60px;
     margin-top: 100px;
     background-color: #f5f5f5;
@@ -505,77 +505,87 @@ text-align: center;
     padding: 25px;
 }
 
-.cover-container {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height: 100vh;
-    background: #7A4BF8; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #CB8EBE 0%, #7A4BF8 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7A4BF8 ), color-stop(100%,#7A4BF8)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  #CB8EBE 0%,#7A4BF8 100%); /* W3C */
-    
-    i {
-        font-size: 24px;
-        color: #fff;
-        padding-top: 30px;
-    }
-
-    i.back {
-        font-size: 38px;
-        padding-top: 0px;
-    }
-
-    h5 {
-        color: #fff;
-        padding-top: 20px;
-    }
-
-    }
-
-
+// .cover-container {
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     min-height: 100vh;
+//     background: #7A4BF8; /* Old browsers */
+//     background: -moz-radial-gradient(center, ellipse cover,  #CB8EBE 0%, #7A4BF8 100%); /* FF3.6+ */
+//     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7A4BF8 ), color-stop(100%,#7A4BF8)); /* Chrome,Safari4+ */
+//     background: -webkit-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Chrome10+,Safari5.1+ */
+//     background: -o-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Opera 12+ */
+//     background: -ms-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* IE10+ */
+//     background: radial-gradient(ellipse at center,  #CB8EBE 0%,#7A4BF8 100%); /* W3C */
+//
+//     i {
+//         font-size: 24px;
+//         color: #fff;
+//         padding-top: 30px;
+//     }
+//
+//     i.back {
+//         font-size: 38px;
+//         padding-top: 0px;
+//     }
+//
+//     h5 {
+//         color: #fff;
+//         padding-top: 20px;
+//     }
+// }
 .cover-heading {
-    color: #fff;
-    padding-top: 30vh;
-
-    span {
-        -webkit-animation: color-change 3.5s infinite;
-        -moz-animation: color-change 3.5s infinite;
-        -o-animation: color-change 3.5s infinite;
-        -ms-animation: color-change 3.5s infinite;
-        animation: color-change 3.5s infinite;
-
-
-        @-webkit-keyframes color-change {
-            0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-moz-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-ms-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-o-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-    }
+  padding-top: 20vh;
+  height: 200px;
 }
+
+.gnomelee {
+  vertical-align: text-bottom;
+  height: inherit;
+}
+
+.guiding {
+  vertical-align: baseline;
+}
+// .cover-heading {
+//     color: #fff;
+//     padding-top: 30vh;
+//
+//     span {
+//         -webkit-animation: color-change 3.5s infinite;
+//         -moz-animation: color-change 3.5s infinite;
+//         -o-animation: color-change 3.5s infinite;
+//         -ms-animation: color-change 3.5s infinite;
+//         animation: color-change 3.5s infinite;
+//
+//
+//         @-webkit-keyframes color-change {
+//             0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-moz-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-ms-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-o-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//     }
+// }
 
 .fade-in {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -583,7 +593,7 @@ text-align: center;
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
-    
+
 
     @keyframes fadein {
         from { opacity: 0; }
@@ -614,7 +624,7 @@ text-align: center;
         to   { opacity: 1; }
     }
     }
-    
+
 
 @media (max-width: 768px) {
     .cover-heading {
@@ -641,7 +651,7 @@ text-align: center;
         text-align: center
     }
 
-    
+
 }
 
 .fp-nav {
@@ -649,7 +659,7 @@ text-align: center;
 }
 
 .white {
-    color: #fff;    
+    color: #fff;
 }
 
 
@@ -669,7 +679,7 @@ a {
     linear-gradient(150deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
     linear-gradient(30deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
     linear-gradient(150deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
-    linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8), 
+    linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8),
     linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8);
     background-size:80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
@@ -697,7 +707,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
         color: #fff;
     }
 
-        
+
 }
 
 .fp-ht {
@@ -705,14 +715,14 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 .fp-first {
-   
+
 }
 @media (max-width: 991px) {
 .fp-ht {
     min-height: 375px;
     }
 .fp-first {
-   
+
     min-height: 700px;
 }
 }
@@ -731,7 +741,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 500px) {
     .fp-ht {
-  
+
     min-height: 550px;
     }
 
@@ -762,7 +772,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     padding: 20px;
     font-size: 150px;
     background-color: #CB8EBE;
-    
+
 }
 
 
@@ -793,7 +803,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 
- .cogs, .thumb, .rocket, .signs, .ring {   
+ .cogs, .thumb, .rocket, .signs, .ring {
     border-radius: 50%;
     color: white;
     display: inline-block;
@@ -840,9 +850,9 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 
 .navbar-btn {
+    border-radius: 5px;
+    background-color: black;
     height: 40px;
-
-
 }
 
 .navbar-nav > li > a {
@@ -866,7 +876,3 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
       -webkit-text-fill-color: transparent;
     }
 }
-
-
-
-
