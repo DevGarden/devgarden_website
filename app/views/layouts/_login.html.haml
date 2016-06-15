@@ -9,33 +9,79 @@
 
     %div.cover-container
 
+      -# .container
+      -#   %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+      -#     %span.sr-only Toggle navigation
+      -#     %span.icon-bar
+      -#     %span.icon-bar
+      -#     %span.icon-bar
+      -#   -# = link_to image_tag('dg_logo.png', :class => 'logo'), root_path, :class => 'navbar-brand'
       .container
-        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        -# = link_to image_tag('dg_logo.png', :class => 'logo'), root_path, :class => 'navbar-brand'
-
-        .collapse.navbar-collapse
-          %ul.nav.navbar-nav.navbar-left
-            %li
-              = link_to 'Contact Us', contact_path, :class => 'pull-left navbar-btn contact'
+        %ul.nav.navbar-nav.navbar-left
+          %li
+            = link_to 'Contact Us', contact_path, :class => 'pull-left navbar-btn contact'
+        %ul.nav.navbar-nav.navbar-right
+          %button.dropbtn.hamburger.hamburger--3dx{"tabindex" => "0", "aria-label" => "menu", "aria-controls" => "navigation"}
+            %span.hamburger-box
+              %span.hamburger-inner
               -# = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
-            %li
+          %div.my-dropdown.dropdown-content
+            %a SIGN IN
+            %a PORTFOLIO
+            %a THE TEAM
+
 
       %div.inner.cover.center.container
         = render 'layouts/messages'
 
         .animated.fadeInUp
           %div.cover-heading
-            = image_tag "gnomelee.png", :class => 'gnomelee'
+            = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block hidden-xs'
           %h3.black.guiding GUIDING CLIENTS TO A DIGITAL FUTURE
 
+        -# %div.row.five-columns
+        -#   %div.col-md-2.col-md-offset-1.pillar-text
+        -#     %p Strategy
+        -#   %div.col-md-2.pillar-text
+        -#     %p Experience Design
+        -#   %div.col-md-2.pillar-text
+        -#     %p Software Engineering
+        -#   %div.col-md-2.pillar-text
+        -#     %p Change Management
+        -#   %div.col-md-2.pillar-text
+        -#     %p Impact Measurement
 
-        %p.lead
+        %div.row.five-columns-img
+          %div.col-md-2.col-xs-6.col-md-offset-1{ "id" => "image_1"}
+            = image_tag "strategy.png", :class => "img-responsive pillar-img"
+          %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_2" }
+            = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
+          %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_3" }
+            = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
+          %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_4" }
+            = image_tag "changemanagement.png", :class => "img-responsive pillar-img"
+          %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_5" }
+            = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
 
+        %div.row.hidden-text
+          %div.col-md-2.hidden-xs.col-md-offset-1{ "id" => "hidden-text1"}
+          %div.col-md-2.hidden-xs.col-md-offset-3{ "id" => "hidden-text2"}
+          %div.col-md-2.hidden-xs.col-md-offset-5{ "id" => "hidden-text3"}
+          %div.col-md-2.hidden-xs.col-md-offset-7{ "id" => "hidden-text4"}
+          %div.col-md-2.hidden-xs.col-md-offset-9{ "id" => "hidden-text5"}
 
+        %div.buffer
+
+        %h3 I'M INTERESTED IN
+        %div.row.interests
+          %div.col-md-3
+            = image_tag "iot.png", :class => "img-responsive  interest-img"
+          %div.col-md-3
+            = image_tag "businessprocesses.png", :class => "img-responsive  interest-img"
+          %div.col-md-3
+            = image_tag "dataintegration.png", :class => "img-responsive  interest-img"
+          %div.col-md-3
+            = image_tag "mobileandenterprise.png", :class => "img-responsive  interest-img"
 
     -# %div.col-md-12.fp-ht.fp-first.fp-long
     -#   .container.icons-top.center
