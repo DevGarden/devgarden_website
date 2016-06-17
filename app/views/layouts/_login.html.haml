@@ -1,37 +1,42 @@
-%div.nav-margin{ "id" => "fullpage"}
+%div{ "id" => "fullpage"}
   %div.section
-    .container
-      %ul.nav.navbar-nav.navbar-left
-        %li
-          = link_to 'Contact Us', contact_path, :class => 'pull-left navbar-btn contact'
-      %nav.navbar-nav.navbar-right
-        %button.dropbtn.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
-          %div.hamburger-box
-            %div.hamburger-inner
-              -# = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
-        %div.dropdown-content
-          %a SIGN IN
-          %a PORTFOLIO
-          = link_to 'THE TEAM', team_path
+    %button.btn.contact-btn{ "id" => "contact-us" }
+      = link_to 'contact us', contact_path
+    -# %h3 Send Us a Message
+    -# = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
+    -#   = f.input :name, :required => true
+    -#   = f.input :email, :required => true
+    -#   = f.input :message, :as => :text, :required => true
+    -#   .hidden
+    -#     = f.input :nickname, :hint => 'Leave this field blank!'
+    -#   %div
+    -#     %button.back-btn.btn back
+    -#   %div
+    -#     = f.button :submit, 'Send message', :class=> "btn btn-primary"
 
-    %div.inner.cover.center
-      = render 'layouts/messages'
+    %button.dropbtn.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+      %div.hamburger-box
+        %div.hamburger-inner
 
-      %div.cover-heading
-        = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block hidden-xs'
-      %h3.black.guiding GUIDING CLIENTS TO A DIGITAL FUTURE
+    -#
+    -# %div.inner.cover.center
+    -#   = render 'layouts/messages'
+
+    %div.cover-heading
+      = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center hidden-xs'
+    %h3.black.guiding.center guiding clients to a digital future
 
 
-    %div.row.five-columns-img
-      %div.col-md-2.col-xs-6.col-md-offset-1{ "id" => "image_1"}
-        = image_tag "strategy.png", :class => "img-responsive pillar-img"
-      %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_2" }
+    %div.row.five-columns-row
+      %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
+        = image_tag "business_services.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
         = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
-      %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_3" }
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
         = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
-      %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_4" }
-        = image_tag "changemanagement.png", :class => "img-responsive pillar-img"
-      %div.col-md-2.col-xs-6.pillar-img{ "id" => "image_5" }
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
+        = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_5" }
         = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
 
     %div.row.hidden-text
@@ -43,7 +48,7 @@
 
   %div.section
 
-    %h3 I'M INTERESTED IN
+    %h3 i am interested in...
     %div.row.interests
       %div.col-md-offset-2.col-md-2
         = image_tag "iot.png", :class => "img-responsive interest-img"
@@ -54,7 +59,7 @@
       %div.col-md-2
         = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
 
-
+  -#
   -# #sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
   -#   .modal-dialog{:role => "document"}
   -#     .modal-content

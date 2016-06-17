@@ -8,11 +8,11 @@
 
 $logo: 'Patua One', cursive;
 
-$font-stack: 'Montserrat','Helvetica Neue',Arial,sans-serif;
-
 $pink: #CB8EBE;
 
 $purple: #523795;
+
+$font-stack: 'Montserrat','Helvetica Neue',Arial,sans-serif;
 
 $turquoise: #66B8F2;
 
@@ -20,9 +20,8 @@ $blue: #007FFF;
 
 
 @font-face {
-font-family: 'bernier';
-src: asset_url('bernier.otf');
-
+  font-family: 'bernier';
+  src: asset_url('bernier.otf') format('opentype');
 }
 
 
@@ -32,11 +31,11 @@ html {
 }
 
 body {
-    font-family: $font-stack;
+    font-family: 'bernier', $font-stack;
     color: #001A33;
     webkit-tap-highlight-color: #222;
     top:0;
-    background-image: url("watermark.png");
+    // background-image: url("watermark.png");
     background-size: cover;
     background-position: center;
 }
@@ -87,12 +86,10 @@ p {
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: 20px;
-    font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
     font-weight: 400;
 }
 
 .text-normal {
-    font-family:'Helvetica Neue',Arial,sans-serif;
 }
 
 .wide-space {
@@ -414,7 +411,7 @@ img::-moz-selection {
 }
 
 .text-normal {
-    font-family: 'bernier', $font-stack;
+    font-family: 'bernier';
     font-size: 30px;
     color: #000;
     opacity: 0.2;
@@ -538,21 +535,66 @@ text-align: center;
 // }
 .cover-heading {
   margin-top: 35px;
-  height: 200px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .gnomelee {
   height: inherit;
 }
 
+.guiding {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+:focus {
+  outline: none;
+}
+
+.-box {
+  display: none;
+}
+
+.contact-form {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+}
+
+abbr {
+  display: none;
+}
+
+.send-button {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  float: right;
+}
+
+.contact-form-show {
+  display: block;
+}
+
+.contact-btn {
+  float: left;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  padding: 0px 2px 0px 2px;
+  margin-left: 10px;
+}
+
 .dropbtn {
     cursor: pointer;
+    float: right;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -581,13 +623,19 @@ text-align: center;
 
 .pillar-img {
   text-align: center;
+  height: inherit;
   margin: auto;
 }
 
-.five-columns-img {
+.five-columns-row {
   background-color: transparent;
-  height: 150px;
-  margin-top: 15px;
+  height: 200px;
+  margin-top: 25px;
+}
+
+.five-columns-img {
+  height: inherit;
+
 }
 
 .hidden-text {
@@ -598,9 +646,6 @@ text-align: center;
   margin-top: 100px;
 }
 
-.buffer{
-  margin-top: 200px;
-}
 
 .hidden-text {
   text-align: center;

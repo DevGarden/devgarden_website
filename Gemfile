@@ -77,7 +77,6 @@ gem 'skrollr-rails'
 
 gem 'ruby-trello'
 
-
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
@@ -92,7 +91,7 @@ group :development, :test do
 
   gem 'capistrano', '~> 3.1'
   gem 'capistrano-bundler'
-  gem 'capistrano3-nginx', '~> 2.0'  
+  gem 'capistrano3-nginx', '~> 2.0'
   gem 'capistrano3-puma'
   gem 'capistrano-rails', github: 'betesh/rails-1', branch: 'master'
   gem 'capistrano-rails-console'
@@ -117,5 +116,3 @@ end
 group :production do
   gem 'rails_12factor', '0.0.2'
 end
-
-
