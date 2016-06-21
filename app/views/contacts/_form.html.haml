@@ -1,0 +1,8 @@
+= simple_form_for Contact.new, :url => contacts_path(:format => :js), :html => {:class => 'contact-form contact-form-hidden col-md-3 col-xs-8' }, :remote => true do |f|
+  = f.button :button, '', :class => 'btn cancel-button glyphicon glyphicon-remove white'
+  = f.input :name, :required => true, :class => 'form-labels'
+  = f.input :message, :as => :text, :required => true, :class => 'form-labels'
+  = f.input :email, :required => true, :class => 'form-labels'
+  = f.button :submit, 'send away', :class => "btn send-button"
+  .hidden
+    = f.input :nickname, :hint => 'Leave this field blank!'

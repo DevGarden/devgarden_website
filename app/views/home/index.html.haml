@@ -13,7 +13,7 @@
     window.prompt = function(){/*disable prompt*/};
     window.open = function(){/*disable open*/};
   }
-  
+
   // prevent href=# click jump
   document.addEventListener("DOMContentLoaded", function() {
     var links = document.getElementsByTagName("A");
@@ -47,14 +47,14 @@
 :javascript
   (function($) {
       "use strict";
-  
+
       $('body').scrollspy({
           target: '.navbar-fixed-top',
           offset: 60
       });
-  
+
       new WOW().init();
-      
+
       $('a.page-scroll').bind('click', function(event) {
           var $ele = $(this);
           $('html, body').stop().animate({
@@ -62,14 +62,14 @@
           }, 1450, 'easeInOutExpo');
           event.preventDefault();
       });
-      
+
       $('#collapsingNavbar li a').click(function() {
           /* always close responsive nav after click */
           $('.navbar-toggler:visible').click();
       });
-  
+
       $('#galleryModal').on('show.bs.modal', function (e) {
          $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
       });
-  
+
   })(jQuery);
