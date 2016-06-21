@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  $('.dropbtn').click(function() {
+  $('.dropdown').click(function() {
     $(".hamburger").toggleClass("is-active");
-    $(".dropdown-content").toggleClass('show');
+    $(".dropdown-content").toggleClass('show-links');
   });
 
   $('.contact-btn').click(function() {
-      
+
   });
 });

@@ -1,5 +1,6 @@
 %div{ "id" => "fullpage"}
-  %div.section
+  .section
+
     %button.btn.contact-btn{ "id" => "contact-us" }
       = link_to 'contact us', contact_path
     -# %h3 Send Us a Message
@@ -14,9 +15,17 @@
     -#   %div
     -#     = f.button :submit, 'Send message', :class=> "btn btn-primary"
 
-    %button.dropbtn.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+
+    %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
       %div.hamburger-box
         %div.hamburger-inner
+      %div.dropdown-content
+        %a
+          %span.link-underline sign in
+        %a
+          %span.link-underline portfolio
+        %a{ 'href' => '/team'}
+          %span.link-underline team
 
     -#
     -# %div.inner.cover.center
@@ -24,7 +33,8 @@
 
     %div.cover-heading
       = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center hidden-xs'
-    %h3.black.guiding.center guiding clients to a digital future
+      = image_tag "hamstertest.jpeg", :class => 'gnomelee-thumb img-responsive center-block center hidden-xs hide-gnomelee'
+    %h2.black.guiding.center guiding clients to a digital future
 
 
     %div.row.five-columns-row
@@ -40,15 +50,20 @@
         = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
 
     %div.row.hidden-text
-      %div.col-md-2.hidden-xs.col-md-offset-1.the-text{ "id" => "hidden-text1"}
-      %div.col-md-2.hidden-xs.col-md-offset-3.the-text{ "id" => "hidden-text2"}
-      %div.col-md-2.hidden-xs.col-md-offset-5.the-text{ "id" => "hidden-text3"}
-      %div.col-md-2.hidden-xs.col-md-offset-7.the-text{ "id" => "hidden-text4"}
-      %div.col-md-2.hidden-xs.col-md-offset-9.the-text{ "id" => "hidden-text5"}
+      %div.col-md-2.hidden-xs.col-md-offset-1
+        %div.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
+      %div.col-md-2.hidden-xs.col-md-offset-3
+        %p.hidden-text2.hidden-box We rapidly model, prototype and iterate solutions.
+      %div.col-md-2.hidden-xs.col-md-offset-5
+        %p.hidden-text3.hidden-box We integrate development with experienced design to reduce errors and improve velocity.
+      %div.col-md-2.hidden-xs.col-md-offset-7
+        %p.hidden-text4.hidden-box We can help value and finance your business, develop your products and connect them to your consumers.
+      %div.col-md-2.hidden-xs.col-md-offset-9
+        %p.hidden-text5.hidden-box We tie the results to the objectives and seek opportunities for continuous improvement.
 
-  %div.section
+  .section
 
-    %h3 i am interested in...
+    %h3.interested i am interested in...
     %div.row.interests
       %div.col-md-offset-2.col-md-2
         = image_tag "iot.png", :class => "img-responsive interest-img"

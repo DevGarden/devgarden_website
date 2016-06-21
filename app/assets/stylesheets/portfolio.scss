@@ -1,0 +1,75 @@
+.title {
+  height: inherit;
+  margin: auto;
+}
+
+.company-img {
+  height: inherit;
+}
+
+.back-btn {
+  height: inherit;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.back-img {
+  height: inherit;
+}
+
+.portfolio-row {
+  height: 65px;
+  margin-top: 55px;
+}
+
+.details {
+  margin-top: 48px;
+}
+
+.headings {
+  margin-bottom: 0px;
+}
+
+.paragraphs {
+  font-family: 'typewcond', 'helvetica';
+  font-size: 32px;
+  margin-top: 0px;
+  margin-bottom: 45px;
+}
+
+.item {
+  height: 500px;
+}
+
+.carousel-control {
+  width: 0;
+}
+
+.carousel-indicators li {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+}
+
+.carousel-indicators .active {
+  background-color: black;
+  width: 21px;
+  height: 21px;
+  margin: 3px;
+}
+
+.glyphicon {
+  color: black;
+}
+
+.item img {
+  max-height: 90%;
+  max-width: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

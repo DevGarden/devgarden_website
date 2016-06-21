@@ -8,7 +8,7 @@
   /       = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
 
 
-= simple_form_for @contact, :html => {:class => 'contact-form col-md-3 col-xs-8' } do |f|
+= simple_form_for @contact, :html => {:class => 'contact-form form-inline col-md-3 col-xs-8' } do |f|
   = f.input :name, :required => true
   = f.input :message, :as => :text, :required => true
   = f.input :email, :required => true

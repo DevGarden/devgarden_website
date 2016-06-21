@@ -39,6 +39,8 @@ Rails.application.routes.draw do
 
   get '/team', to: 'team#index'
 
+  get '/portfolio', to: 'portfolio#index'
+
   get 'client' => 'home#client'
   match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
