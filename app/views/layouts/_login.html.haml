@@ -9,7 +9,7 @@
     %div.hamburger-box
       %div.hamburger-inner
     %div.dropdown-content
-      %a
+      %a{ 'href' => '#sign-in', 'data-toggle' => 'modal'}
         %span.link-underline sign in
       %a{ 'href' => '/portfolio'}
         %span.link-underline portfolio
@@ -54,21 +54,31 @@
 
   %h3.interested i am interested in...
   %div.row.interests
-    %div.col-md-offset-2.col-md-2.col-sm-6
+    %div.col-md-offset-2.col-md-2.col-sm-6{'id' => 'iot'}
       = image_tag "iot.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6
+    %div.col-md-2.col-sm-6{'id' => 'businessprocesses'}
       = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6
+    %div.col-md-2.col-sm-6{'id' => 'dataintegration'}
       = image_tag "dataintegration.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6
+    %div.col-md-2.col-sm-6{'id' => 'mobileandenterprise'}
       = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
 
--#
--# #sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
--#   .modal-dialog{:role => "document"}
--#     .modal-content
--#       .modal-header
--#         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
--#           %span{"aria-hidden" => "true"} &times;
--#       .modal-body
--#         = render 'layouts/signin'
+  %div.row.project-row
+    %div.col-md-5.left-col
+      %div.project-circle.hide-circle{'id' => 'left-circle'}
+    %div.col-md-2.center-col
+      %div.project-circle.hide-circle{'id' => 'center-circle'}
+    %div.col-md-5.right-col
+      %div.project-circle.hide-circle{'id' => 'right-circle'}
+
+
+
+
+#sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+      .modal-body
+        = render 'layouts/signin'
