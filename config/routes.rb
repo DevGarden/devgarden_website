@@ -33,13 +33,11 @@ Rails.application.routes.draw do
   end
 
   get 'home/index'
-  get 'contacts/new'
-  get 'contacts/create'
   get 'contact' => 'contacts#new'
 
   get '/team', to: 'team#index'
 
-  get '/portfolio', to: 'portfolio#index'
+  resources 'portfolio', only: [:index, :show]
 
   get 'client' => 'home#client'
   match '/contacts', to: 'contacts#new', via: 'get'

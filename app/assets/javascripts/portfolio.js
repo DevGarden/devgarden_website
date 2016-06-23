@@ -2,35 +2,41 @@ $(document).ready(function() {
 
   $('#iot').click(
     function() {
-      $('.project-circle').removeClass('hide-circle');
-      $('.project-circle').addClass('animated fadeIn');
-      $('#left-circle').addClass('veristride');
-      $('#center-circle').addClass('datamurallogo');
+      $('.iot-container').addClass('hide');
+      $('.businessprocesses-container').addClass('hide');
+      $('.dataintegration-container').addClass('hide');
+      $('.mobileandenterprise-container').addClass('hide');
+      $('.iot-container').removeClass('hide');
     }
   )
 
   $('#businessprocesses').click(
     function() {
-      $('.project-circle').removeClass('hide-circle');
-      $('.project-circle').addClass('animated fadeIn');
+      $('.iot-container').addClass('hide');
+      $('.businessprocesses-container').addClass('hide');
+      $('.dataintegration-container').addClass('hide');
+      $('.mobileandenterprise-container').addClass('hide');
+      $('.businessprocesses-container').removeClass('hide');
     }
   )
 
   $('#dataintegration').click(
     function() {
-
-      $('.project-circle').removeClass('hide-circle');
-
-      $('.project-circle').addClass('animated fadeIn');
+      $('.iot-container').addClass('hide');
+      $('.businessprocesses-container').addClass('hide');
+      $('.dataintegration-container').addClass('hide');
+      $('.mobileandenterprise-container').addClass('hide');
+      $('.dataintegration-container').removeClass('hide');
     }
   )
 
   $('#mobileandenterprise').click(
     function() {
-
-      $('.project-circle').removeClass('hide-circle');
-
-      $('.project-circle').addClass('animated fadeIn');
+      $('.iot-container').addClass('hide');
+      $('.businessprocesses-container').addClass('hide');
+      $('.dataintegration-container').addClass('hide');
+      $('.mobileandenterprise-container').addClass('hide');
+      $('.mobileandenterprise-container').removeClass('hide');
     }
   )
 

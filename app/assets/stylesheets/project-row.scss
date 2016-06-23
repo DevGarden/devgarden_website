@@ -10,25 +10,51 @@
   border-radius: 100%;
 }
 
-.hide-circle {
+.hide {
   display: none;
 }
 
-.circle-img {
-  height: inherit;
-  width: inherit;
-}
-
-#left-circle {
+.left-col {
   float: right;
+  clear: left;
 }
 
-#center-circle {
-  margin: auto;
+.right-col {
 }
 
-#right-circle {
-  float: left;
+.center-col {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left-button {
+  clear: both;
+  float: right;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.center-button {
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.right-button {
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
+.project-button {
+  background-color: black;
+  color: white;
+  font-size: 22px;
+  text-transform: lowercase;
+}
+
+a:hover, a:focus {
+  color: #F5F5F5;
 }
 
 .veristride {
@@ -36,12 +62,84 @@
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+
+}
+
+.iveenamedlogo {
+  background-image: url('iveenamedlogo.png');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.sustain3logo {
+  background-image: url('sustain3logo.png');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.vundertvlogo {
+  background-image: url('vundertvlogo.png');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.oilcommandlogo {
+  background-image: url('oilcommandlogo.png');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.grocerygameplanlogo {
+  background-image: url('grocerygameplanlogo.png');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
 }
 
 .grantminer {
-  background-image: url('businessprocesses.png');
-  background-size: cover;
+  background-image: url('grantminerlogo.png');
+  background-size: 90%;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
 }
 
 .datamurallogo {
@@ -49,4 +147,9 @@
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
 }

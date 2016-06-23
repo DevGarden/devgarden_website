@@ -63,14 +63,60 @@
     %div.col-md-2.col-sm-6{'id' => 'mobileandenterprise'}
       = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
 
-  %div.row.project-row
-    %div.col-md-5.left-col
-      %div.project-circle.hide-circle{'id' => 'left-circle'}
-    %div.col-md-2.center-col
-      %div.project-circle.hide-circle{'id' => 'center-circle'}
-    %div.col-md-5.right-col
-      %div.project-circle.hide-circle{'id' => 'right-circle'}
+  %div.row.project-row.hidden-xs
+    %div.iot-container.hide
+      %div.col-md-5
+        %div.veristride.left-col
+        %button.btn.project-button.left-button
+          = link_to 'see project', portfolio_path("veristride"), :remote => true
+      %div.col-md-2
+        %div.center-col
+      %div.col-md-5
+        %div.datamurallogo.right-col
+        %button.btn.project-button.right-button
 
+
+    %div.businessprocesses-container.hide
+      %div.col-md-5
+        %div.veristride.left-col
+        %button.btn.project-button.left-button
+
+      %div.col-md-2
+        %div.sustain3logo.center-col
+        %button.btn.project-button.center-button
+
+      %div.col-md-5
+        %div.iveenamedlogo.right-col
+        %button.btn.project-button.right-button
+
+
+    %div.dataintegration-container.hide
+      %div.col-md-5
+        %div.veristride.left-col
+        %button.btn.project-button.left-button
+
+      %div.col-md-2
+        %div.center-col
+      %div.col-md-5
+        %div.grocerygameplanlogo.right-col
+        %button.btn.project-button.right-button
+
+
+    %div.mobileandenterprise-container.hide
+      %div.col-md-5
+        %div.oilcommandlogo.left-col
+        %button.btn.project-button.left-button
+
+      %div.col-md-2
+        %div.grantminer.center-col
+        %button.btn.project-button.center-button
+
+      %div.col-md-5
+        %div.vundertvlogo.right-col
+        %button.btn.project-button.right-button
+
+
+#project-modal.modal.fade.in.center
 
 
 

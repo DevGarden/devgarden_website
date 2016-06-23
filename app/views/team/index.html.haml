@@ -1,37 +1,36 @@
-%h3 THIS IS THE TEAM
+%div.section
 
-%container
-  %div.row
-    %div.col-md-2.col-md-offset-3.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
+  %div.contact-btn{ "id" => "contact-us" } contact us
+  = render 'contacts/form'
 
-%container
-  %div.row
-    %div.col-md-2.col-md-offset-3.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
+  %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+    %div.hamburger-box
+      %div.hamburger-inner
+    %div.dropdown-content
+      %a{ 'href' => '/portfolio'}
+        %span.link-underline portfolio
+      %a{ 'href' => '/team'}
+        %span.link-underline team
+      %a{ 'href' => '/'}
+        %span.link-underline home
 
-%container
-  %div.row
-    %div.col-md-2.col-md-offset-3.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
-    %div.col-md-2.col-xs-4
-      %div.team-pics.hamster
-        %div.circle-inner
+
+  %h3.center about us
+
+  %div.row.team-row
+    %div.col-md-5
+      %div.pic.left-col.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
+    %div.col-md-2
+      %div.pic.center-col.hank
+    %div.col-md-5
+      %div.pic.right-col.hank
+
+
+  #hank.modal.fade{"aria-labelledby" => "hank", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} &times;
+        .modal-body
+          = render 'hank'

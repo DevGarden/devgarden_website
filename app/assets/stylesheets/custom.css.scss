@@ -539,7 +539,6 @@ text-align: center;
 //     }
 // }
 
-
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active {
@@ -595,7 +594,7 @@ input[type=number]:focus,
 }
 
 .contact-form {
-  position: absolute;
+  position: fixed;
   background-color: black;
   color: white;
   border-radius: 5px;
@@ -603,6 +602,7 @@ input[type=number]:focus,
   margin-left: 10px;
   padding-bottom: 12px;
   padding-left: 12px;
+  z-index: 99;
 
 }
 
@@ -679,6 +679,7 @@ abbr {
     float: right;
     top: 0;
     right: 0;
+    z-index: 100;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -756,6 +757,7 @@ abbr {
 .interest-img {
   height: 200px;
   margin: auto;
+  cursor: pointer;
 }
 
 .interested {
@@ -767,41 +769,6 @@ abbr {
   margin-left: 12px;
 }
 
-.profile {
-  height: auto;
-  width: 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
-.team-pics {
-    // margin: 0 auto 20px;
-    width: 90%;
-}
-
-.team-pics::after {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    // height: 0;
-    padding-bottom: 100%;
-    width: 100%;
-}
-
-// .team-pics div {
-//     color: black;
-//     float: left;
-//     line-height: 1em;
-//     margin-top: -0.5em;
-//     padding-top: 50%;
-//     text-align: center;
-//     width: 100%;
-// }
-
-.hamster::after {
-    background: url("hamstertest.jpeg") scroll 0 0 / cover;
-    border: 1px solid black;
-}
 
 // .cover-heading {
 //     color: #fff;

@@ -1,14 +1,15 @@
-.title {
+.company-img {
   height: inherit;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.company-img {
+.title {
   height: inherit;
 }
 
 .back-btn {
-  height: inherit;
+  height: 30px;
   margin: auto;
   margin-top: 12px;
 }
@@ -32,7 +33,7 @@
 
 .paragraphs {
   font-family: 'typewcond', 'helvetica';
-  font-size: 32px;
+  font-size: 20px;
   margin-top: 0px;
   margin-bottom: 45px;
 }
