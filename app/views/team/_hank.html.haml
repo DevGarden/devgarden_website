@@ -1,1 +1,22 @@
-%p i'm hank
+%button.close{"data-dismiss" => "modal", :type => "button"}
+  %span &times;
+
+%div.hank.col-md-3
+
+%div.col-md-8
+  %h3 hank hamstershire
+
+  %h5 passions
+  %p.paragraphs Wheel turning, earl grey tea, the sunday paper
+
+  %h5 skills
+  %p.paragraphs While he has many; he elects to be modest and not disclose them
+
+  %h5 projects
+  %div.row
+    %div.col-md-4.team-project-div
+      = image_tag "oilcommandlogo.png", :class => "img-responsive team-project-img"
+    %div.col-md-4.team-project-div
+      = image_tag "ezliftlogo.png", :class => "img-responsive team-project-img"
+    %div.col-md-4.team-project-div
+      = image_tag "veristride.png", :class => "img-responsive team-project-img"

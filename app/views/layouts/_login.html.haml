@@ -1,124 +1,136 @@
-%div.section
+%div
 
-  %div.contact-btn{ "id" => "contact-us" } contact us
+  %div.section
 
-  = render 'contacts/form'
+    %div.contact-btn{ "id" => "contact-us" } contact us
 
-
-  %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
-    %div.hamburger-box
-      %div.hamburger-inner
-    %div.dropdown-content
-      %a{ 'href' => '#sign-in', 'data-toggle' => 'modal'}
-        %span.link-underline sign in
-      %a{ 'href' => '/portfolio'}
-        %span.link-underline portfolio
-      %a{ 'href' => '/team'}
-        %span.link-underline team
-
-  -#
-  -# %div.inner.cover.center
-  -#   = render 'layouts/messages'
-
-  %div.cover-heading
-    = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center hidden-sm hidden-xs'
-    = image_tag "thumbsup.png", :class => 'gnomelee-thumb gnomelee-hide img-responsive center-block center hidden-xs'
-  %h2.black.guiding.center guiding clients to a digital future
+    = render 'contacts/form'
 
 
-  %div.row.five-columns-row
-    %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
-      = image_tag "business_services.png", :class => "img-responsive pillar-img"
-    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
-      = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
-    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
-      = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
-    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
-      = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
-    %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
-      = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
+    %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+      %div.hamburger-box
+        %div.hamburger-inner
+      %div.dropdown-content
+        %a{ 'href' => '/portfolio'}
+          %span.link-underline portfolio
+        %a{ 'href' => '/team'}
+          %span.link-underline team
+        %a{ 'href' => '#sign-in', 'data-toggle' => 'modal'}
+          %span.link-underline sign in
 
-  %div.row.hidden-text
-    %div.col-md-2.col-md-offset-1
-      %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
-    %div.col-md-2
-      %p.hidden-box{ 'id' => 'hidden-text2'} We rapidly model, prototype and iterate solutions.
-    %div.col-md-2
-      %p.hidden-box{ 'id' => 'hidden-text3'} We integrate development with experienced design to reduce errors and improve velocity.
-    %div.col-md-2
-      %p.hidden-box{ 'id' => 'hidden-text4'} We can help value and finance your business, develop your products and connect them to your consumers.
-    %div.col-md-2
-      %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
+    -#
+    -# %div.inner.cover.center
+    -#   = render 'layouts/messages'
 
-%div.section
+    %div.cover-heading
+      = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center hidden-sm hidden-xs'
+      = image_tag "thumbsup.png", :class => 'gnomelee-thumb gnomelee-hide img-responsive center-block center hidden-xs'
+    %h2.black.guiding.center guiding clients to a digital future
 
-  %h3.interested i am interested in...
-  %div.row.interests
-    %div.col-md-offset-2.col-md-2.col-sm-6{'id' => 'iot'}
-      = image_tag "iot.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6{'id' => 'businessprocesses'}
-      = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6{'id' => 'dataintegration'}
-      = image_tag "dataintegration.png", :class => "img-responsive interest-img"
-    %div.col-md-2.col-sm-6{'id' => 'mobileandenterprise'}
-      = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
 
-  %div.row.project-row.hidden-xs
-    %div.iot-container.hide
-      %div.col-md-5
-        %div.veristride.left-col
-        %button.btn.project-button.left-button
-          = link_to 'see project', portfolio_path("veristride"), :remote => true
+    %div.row.five-columns-row
+      %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
+        = image_tag "business_services.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
+        = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
+        = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
+        = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
+        = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
+
+    %div.row.hidden-text
+      %div.col-md-2.col-md-offset-1
+        %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
       %div.col-md-2
-        %div.center-col
-      %div.col-md-5
-        %div.datamurallogo.right-col
-        %button.btn.project-button.right-button
-
-
-    %div.businessprocesses-container.hide
-      %div.col-md-5
-        %div.veristride.left-col
-        %button.btn.project-button.left-button
-
+        %p.hidden-box{ 'id' => 'hidden-text2'} We rapidly model, prototype and iterate solutions.
       %div.col-md-2
-        %div.sustain3logo.center-col
-        %button.btn.project-button.center-button
-
-      %div.col-md-5
-        %div.iveenamedlogo.right-col
-        %button.btn.project-button.right-button
-
-
-    %div.dataintegration-container.hide
-      %div.col-md-5
-        %div.veristride.left-col
-        %button.btn.project-button.left-button
-
+        %p.hidden-box{ 'id' => 'hidden-text3'} We integrate development with experienced design to reduce errors and improve velocity.
       %div.col-md-2
-        %div.center-col
-      %div.col-md-5
-        %div.grocerygameplanlogo.right-col
-        %button.btn.project-button.right-button
-
-
-    %div.mobileandenterprise-container.hide
-      %div.col-md-5
-        %div.oilcommandlogo.left-col
-        %button.btn.project-button.left-button
-
+        %p.hidden-box{ 'id' => 'hidden-text4'} We can help value and finance your business, develop your products and connect them to your consumers.
       %div.col-md-2
-        %div.grantminer.center-col
-        %button.btn.project-button.center-button
+        %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
 
-      %div.col-md-5
-        %div.vundertvlogo.right-col
-        %button.btn.project-button.right-button
+  %div.section
+
+    %h3.interested i am interested in...
+    %div.row.interests
+      %div.col-md-offset-2.col-md-2.col-sm-6.interest-holder{'id' => 'iot'}
+        = image_tag "iot.png", :class => "img-responsive interest-img"
+      %div.col-md-2.col-sm-6.interest-holder{'id' => 'businessprocesses'}
+        = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
+      %div.col-md-2.col-sm-6.interest-holder{'id' => 'dataintegration'}
+        = image_tag "dataintegration.png", :class => "img-responsive interest-img"
+      %div.col-md-2.col-sm-6.interest-holder{'id' => 'mobileandenterprise'}
+        = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
+
+    .container
+      %div.row.project-row.hidden-xs
+        %div.iot-container.hide
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.veristride.logo-img
+            %button.btn.project-button.left-button
+              = link_to 'see project', portfolio_path("veristride"), :remote => true
+          %div.col-md-2.col-sm-2.col-xs-2.project-col
+            %div.logo-img
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.datamurallogo.logo-img
+            %button.btn.project-button.right-button
+              = link_to 'see project', portfolio_path("datamural"), :remote => true
 
 
-#project-modal.modal.fade.in.center
+        %div.businessprocesses-container.hide
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.grantminerlogo.logo-img
+            %button.btn.project-button.left-button
+              = link_to 'see project', portfolio_path("grantminer"), :remote => true
+
+          %div.col-md-2.col-sm-2.col-xs-2.project-col
+            %div.sustain3logo.logo-img
+            %button.btn.project-button.center-button
+              = link_to 'see project', portfolio_path("sustain3"), :remote => true
+
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.ezliftlogo.logo-img
+            %button.btn.project-button.right-button
+              = link_to 'see project', portfolio_path("ezlift"), :remote => true
 
 
+        %div.dataintegration-container.hide
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.dispatchlogo.logo-img
+            %button.btn.project-button.left-button
+              = link_to 'see project', portfolio_path("dispatch"), :remote => true
+
+          %div.col-md-2.col-sm-2.col-xs-2.project-col
+            %div.traclogo.logo-img
+            %button.btn.project-button.center-button
+              = link_to 'see project', portfolio_path("tracteam"), :remote => true
+
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.grocerygameplanlogo.logo-img
+            %button.btn.project-button.right-button
+              = link_to 'see project', portfolio_path("grocerygameplan"), :remote => true
+
+        %div.mobileandenterprise-container.hide
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.oilcommandlogo.logo-img
+            %button.btn.project-button.left-button
+              = link_to 'see project', portfolio_path("oilcommand"), :remote => true
+
+          %div.col-md-2.col-sm-2.col-xs-2.project-col
+            %div.sustain3logo.logo-img
+            %button.btn.project-button.center-button
+              = link_to 'see project', portfolio_path("sustain3"), :remote => true
+
+          %div.col-md-5.col-sm-5.col-xs-5.project-col
+            %div.vundertvlogo.logo-img
+            %button.btn.project-button.right-button
+              = link_to 'see project', portfolio_path("vundertv"), :remote => true
+
+
+#project-modal.modal
 
 #sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}

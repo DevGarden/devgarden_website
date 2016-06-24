@@ -1,0 +1,40 @@
+{
+    "master_picture": "app/assets/images/gnomelee.png",
+    "favicon_design": {
+        "ios": {
+            "picture_aspect": "background_and_margin",
+            "background_color": "#ffffff",
+            "margin": "14%"
+        },
+        "desktop_browser": [
+
+        ],
+        "windows": {
+            "picture_aspect": "no_change",
+            "background_color": "#ff0000",
+            "on_conflict": "override"
+        },
+        "android_chrome": {
+            "picture_aspect": "background_and_margin",
+            "margin": "17%",
+            "background_color": "#f7f6f6",
+            "theme_color": "#ffffff",
+            "manifest": {
+                "name": "DevGarden",
+                "display": "browser",
+                "orientation": "not_set",
+                "on_conflict": "override",
+                "declared": true
+            }
+        },
+        "safari_pinned_tab": {
+            "picture_aspect": "black_and_white",
+            "threshold": 63.28125,
+            "theme_color": "#ff0000"
+        }
+    },
+    "settings": {
+        "scaling_algorithm": "Mitchell",
+        "error_on_image_too_small": false
+    }
+}

@@ -7,20 +7,20 @@
         %div.row.portfolio-row
           .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
-          .col-md-11.title
-            = image_tag 'veristride.png', :class => 'company-img img-responsive'
+          .col-md-11.company-div.title
+            = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive'
 
 
         %div.row.details
           %div.col-md-6.div.col-xs-12.details-text
             %h4.headings project overview
-            %p.paragraphs Veristride needed an IOS app to take their data garter by smart insoles and display it to users
+            %p.paragraphs Creating a user device that enables companies to map out the digital density inside of a space; allowing the company to monitor energy output, usage, and how the devices are working together.
 
             %h4.headings work
-            %p.paragraphs Mobile App Design
+            %p.paragraphs Device to map out digital density of workforce
 
             %h4.headings services
-            %p.paragraphs Internet of Things, Mobile and Enterprise <br> Software Development, Strategy <br> Impact Measurement, Design
+            %p.paragraphs  Developing Hardware & Software <br> Valuation, Service Offering Development
 
           %div.col-md-6.col-xs-12.details-gallery
             #myCarousel.carousel.slide{"data-ride" => "carousel"}
@@ -29,12 +29,9 @@
                 %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
                 %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
                 %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-                %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
               / Wrapper for slides
               .carousel-inner{:role => "listbox"}
                 .item.active
-                  = image_tag 'hamstertest.jpeg'
-                .item
                   = image_tag 'impactmanagement.png'
                 .item
                   = image_tag 'hamstertest.jpeg'

@@ -17,20 +17,83 @@
 
   %h3.center about us
 
-  %div.row.team-row
-    %div.col-md-5
-      %div.pic.left-col.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
-    %div.col-md-2
-      %div.pic.center-col.hank
-    %div.col-md-5
-      %div.pic.right-col.hank
+  .container
+    %div.row.team-row
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-sm-2.col-xs-12
+        %div.pic.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#kimberley', 'data-toggle' => 'modal'}
 
+    %div.row.team-row
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#stu', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-sm-2.col-xs-12
+        %div.pic.hank{ 'href' => '#chrisciacone', 'data-toggle' => 'modal'}
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#dave', 'data-toggle' => 'modal'}
 
-  #hank.modal.fade{"aria-labelledby" => "hank", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog{:role => "document"}
-      .modal-content
-        .modal-header
-          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-            %span{"aria-hidden" => "true"} &times;
-        .modal-body
+    %div.row.team-row
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#andrew', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-sm-2.col-xs-12
+        %div.pic.hank{ 'href' => '#daviddangelo', 'data-toggle' => 'modal'}
+      %div.col-md-5.col-sm-5.col-xs-12
+        %div.pic.hank{ 'href' => '#trenton', 'data-toggle' => 'modal'}
+
+#hank.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
           = render 'hank'
+
+#trenton.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'trenton'
+
+#kimberley.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'kimberley'
+
+#stu.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'stu'
+
+#chrisciacone.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'chrisciacone'
+
+#dave.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'dave'
+
+#andrew.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'andrew'
+
+#daviddangelo.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'daviddangelo'

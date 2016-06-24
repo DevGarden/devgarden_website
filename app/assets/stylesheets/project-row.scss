@@ -1,49 +1,35 @@
 .project-row {
   height: 375px;
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
-.project-circle {
-  height: 150px;
-  width: 150px;
-  border: 2px solid black;
-  border-radius: 100%;
-}
 
 .hide {
   display: none;
 }
 
-.left-col {
-  float: right;
-  clear: left;
+.project-col {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.right-col {
-}
-
-.center-col {
+.logo-img {
   margin-left: auto;
   margin-right: auto;
 }
 
 .left-button {
-  clear: both;
-  float: right;
   margin-top: 12px;
-  margin-right: 15px;
+
 }
 
 .center-button {
   margin-top: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
 .right-button {
   margin-top: 12px;
-  margin-left: 15px;
 }
 
 .project-button {
@@ -53,12 +39,9 @@
   text-transform: lowercase;
 }
 
-a:hover, a:focus {
-  color: #F5F5F5;
-}
-
 .veristride {
   background-image: url('veristride.png');
+  margin-top: 18px;
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,6 +55,7 @@ a:hover, a:focus {
 
 .iveenamedlogo {
   background-image: url('iveenamedlogo.png');
+  margin-top: 18px;
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,6 +68,7 @@ a:hover, a:focus {
 
 .sustain3logo {
   background-image: url('sustain3logo.png');
+  margin-top: 18px;
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,6 +81,7 @@ a:hover, a:focus {
 
 .vundertvlogo {
   background-image: url('vundertvlogo.png');
+  margin-top: 18px;
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,7 +94,21 @@ a:hover, a:focus {
 
 .oilcommandlogo {
   background-image: url('oilcommandlogo.png');
-  background-size: 85%;
+  margin-top: 18px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.ezliftlogo {
+  background-image: url('ezliftlogo.png');
+  margin-top: 18px;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
   height: 150px;
@@ -120,6 +120,7 @@ a:hover, a:focus {
 
 .grocerygameplanlogo {
   background-image: url('grocerygameplanlogo.png');
+  margin-top: 18px;
   background-size: 85%;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,8 +131,9 @@ a:hover, a:focus {
   box-shadow: 2px 2px 18px #888888;
 }
 
-.grantminer {
+.grantminerlogo {
   background-image: url('grantminerlogo.png');
+  margin-top: 18px;
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,8 +144,61 @@ a:hover, a:focus {
   box-shadow: 2px 2px 18px #888888;
 }
 
+.dispatchlogo {
+  background-image: url('dispatchlogo.png');
+  margin-top: 18px;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #88888;
+}
+
 .datamurallogo {
   background-image: url('datamurallogo.png');
+  margin-top: 18px;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.traclogo {
+  background-image: url('traclogo.png');
+  margin-top: 18px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.digitaldensitylogo {
+  background-image: url('digitaldensitylogo.png');
+  margin-top: 18px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+}
+
+.imslogo {
+  background-image: url('digitaldensitylogo.png');
+  margin-top: 18px;
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
