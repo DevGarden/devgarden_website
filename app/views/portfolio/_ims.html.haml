@@ -7,14 +7,14 @@
         %div.row.portfolio-row
           .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
-          .col-md-11.company-div.title
-            = image_tag 'imslogo.png', :class => 'company-img img-responsive'
+          .col-md-11.col-xs-9.title
+            = image_tag 'imslogo.jpeg', :class => 'company-img img-responsive', :style => "height: 225px"
 
 
         %div.row.details
           %div.col-md-6.div.col-xs-12.details-text
             %h4.headings project overview
-            %p.paragraphs Revamp their marketing strategy, rreevaluate company overview, find financing in order to fulfill future projects.
+            %p.paragraphs Revamp their marketing strategy, reevaluate company overview, find financing in order to fulfill future projects.
 
             %h4.headings work
             %p.paragraphs Business consultation
@@ -31,15 +31,14 @@
               %ol.carousel-indicators
                 %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
                 %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-                %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+
               / Wrapper for slides
               .carousel-inner{:role => "listbox"}
                 .item.active
-                  = image_tag 'impactmanagement.png'
+                  = image_tag 'imsvisual.png'
                 .item
-                  = image_tag 'hamstertest.jpeg'
-                .item
-                  = image_tag 'gnomelee.png'
+                  = image_tag 'imslogo.jpeg'
+
               / Left and right controls
               %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
                 %span.glyphicon.glyphicon-chevron-left.black{"aria-hidden" => "true"}

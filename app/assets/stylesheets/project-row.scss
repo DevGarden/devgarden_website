@@ -32,6 +32,14 @@
   margin-top: 12px;
 }
 
+.clickable-space {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 38px;
+  height: 150px;
+  width: 150px;
+}
+
 .project-button {
   background-color: black;
   color: white;
@@ -40,6 +48,7 @@
 }
 
 .veristride {
+  background-color: white;
   background-image: url('veristride.png');
   margin-top: 18px;
   background-size: 90%;
@@ -49,11 +58,12 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 
 }
 
 .iveenamedlogo {
+  background-color: white;
   background-image: url('iveenamedlogo.png');
   margin-top: 18px;
   background-size: 85%;
@@ -63,10 +73,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .sustain3logo {
+  background-color: white;
   background-image: url('sustain3logo.png');
   margin-top: 18px;
   background-size: 85%;
@@ -76,10 +87,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .vundertvlogo {
+  background-color: white;
   background-image: url('vundertvlogo.png');
   margin-top: 18px;
   background-size: 85%;
@@ -89,10 +101,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .oilcommandlogo {
+  background-color: white;
   background-image: url('oilcommandlogo.png');
   margin-top: 18px;
   background-size: 80%;
@@ -102,10 +115,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .ezliftlogo {
+  background-color: white;
   background-image: url('ezliftlogo.png');
   margin-top: 18px;
   background-size: 80%;
@@ -115,10 +129,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .grocerygameplanlogo {
+  background-color: white;
   background-image: url('grocerygameplanlogo.png');
   margin-top: 18px;
   background-size: 85%;
@@ -128,10 +143,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .grantminerlogo {
+  background-color: white;
   background-image: url('grantminerlogo.png');
   margin-top: 18px;
   background-size: 90%;
@@ -141,10 +157,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .dispatchlogo {
+  background-color: white;
   background-image: url('dispatchlogo.png');
   margin-top: 18px;
   background-size: 90%;
@@ -154,10 +171,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #88888;
+  box-shadow: 2px 2px 9px #88888;
 }
 
 .datamurallogo {
+  background-color: white;
   background-image: url('datamurallogo.png');
   margin-top: 18px;
   background-size: 70%;
@@ -167,10 +185,11 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .traclogo {
+  background-color: white;
   background-image: url('traclogo.png');
   margin-top: 18px;
   background-size: 80%;
@@ -180,31 +199,61 @@
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .digitaldensitylogo {
+  background-color: white;
   background-image: url('digitaldensitylogo.png');
   margin-top: 18px;
-  background-size: 80%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: 150px;
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
 }
 
 .imslogo {
-  background-image: url('digitaldensitylogo.png');
+  background-color: white;
+  background-image: url('imslogo.jpeg');
   margin-top: 18px;
-  background-size: 80%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: 150px;
   width: 150px;
   border: 2px solid black;
   border-radius: 100%;
-  box-shadow: 2px 2px 18px #888888;
+  box-shadow: 2px 2px 9px #888888;
+}
+
+.innovationartslogo {
+  background-color: white;
+  background-image: url('innovationartslogo.png');
+  margin-top: 18px;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 9px #888888;
+}
+
+.lunasoftlogo {
+  background-color: white;
+  background-image: url('lunasoftlogo.png');
+  margin-top: 18px;
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 9px #888888;
 }

@@ -17,6 +17,18 @@
   margin-top: 38px;
 }
 
+.close {
+  font-size: 75px;
+  font-weight: 300;
+  margin-top: 11px;
+  margin-right: 4px;
+  line-height: 24px;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 .team-row {
 }
 
@@ -56,6 +68,21 @@
 .team-project-img {
   position: relative;
   top: 50%;
+  margin-left: auto;
+  margin-right: auto;
   transform: translateY(-50%);
   height: inherit;
+}
+
+.trent {
+  background-image: url('trent1.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+  cursor: pointer;
 }

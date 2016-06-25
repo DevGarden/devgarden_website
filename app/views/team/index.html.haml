@@ -1,6 +1,8 @@
 %div.section
 
   %div.contact-btn{ "id" => "contact-us" } contact us
+  %div.success-btn{ "id" => "success" } success!
+
   = render 'contacts/form'
 
   %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
@@ -8,9 +10,9 @@
       %div.hamburger-inner
     %div.dropdown-content
       %a{ 'href' => '/portfolio'}
-        %span.link-underline portfolio
+        %span.link-underline clients
       %a{ 'href' => '/team'}
-        %span.link-underline team
+        %span.link-underline about us
       %a{ 'href' => '/'}
         %span.link-underline home
 
@@ -19,28 +21,36 @@
 
   .container
     %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
-        %div.pic.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
-      %div.col-md-2.col-sm-2.col-xs-12
-        %div.pic.hank{ 'href' => '#hank', 'data-toggle' => 'modal'}
-      %div.col-md-5.col-sm-5.col-xs-12
+      %div.col-md-2.col-md-offset-3.col-xs-12
+        %div.pic.hank{ 'href' => '#darren', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-xs-12
+        %div.pic.hank{ 'href' => '#christopher', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-xs-12
         %div.pic.hank{ 'href' => '#kimberley', 'data-toggle' => 'modal'}
 
     %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
+      %div.col-md-2.col-md-offset-3.col-xs-12
         %div.pic.hank{ 'href' => '#stu', 'data-toggle' => 'modal'}
-      %div.col-md-2.col-sm-2.col-xs-12
+      %div.col-md-2.col-xs-12
         %div.pic.hank{ 'href' => '#chrisciacone', 'data-toggle' => 'modal'}
-      %div.col-md-5.col-sm-5.col-xs-12
+      %div.col-md-2.col-xs-12
         %div.pic.hank{ 'href' => '#dave', 'data-toggle' => 'modal'}
 
     %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
+      %div.col-md-2.col-md-offset-3.col-xs-12
         %div.pic.hank{ 'href' => '#andrew', 'data-toggle' => 'modal'}
-      %div.col-md-2.col-sm-2.col-xs-12
+      %div.col-md-2.col-xs-12
         %div.pic.hank{ 'href' => '#daviddangelo', 'data-toggle' => 'modal'}
-      %div.col-md-5.col-sm-5.col-xs-12
-        %div.pic.hank{ 'href' => '#trenton', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-xs-12
+        %div.pic.trent{ 'href' => '#trenton', 'data-toggle' => 'modal'}
+
+    %div.row.team-row
+      %div.col-md-2.col-md-offset-3.col-xs-12
+        %div.pic.hank{ 'href' => '#stephanie', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-xs-12
+        %div.pic.hank{ 'href' => '#russell', 'data-toggle' => 'modal'}
+      %div.col-md-2.col-xs-12
+        %div.pic.hank{ 'href' => '#matt', 'data-toggle' => 'modal'}
 
 #hank.modal.modal-team.fade
   .modal-dialog.modal-dialog-team
@@ -97,3 +107,38 @@
       .modal-body.modal-header-team
         %div.row.modal-row
           = render 'daviddangelo'
+
+#christopher.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'christopher'
+
+#russell.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'russell'
+
+#stephanie.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'stephanie'
+
+#darren.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'darren'
+
+#matt.modal.modal-team.fade
+  .modal-dialog.modal-dialog-team
+    .modal-content.modal-content-team
+      .modal-body.modal-header-team
+        %div.row.modal-row
+          = render 'matt'

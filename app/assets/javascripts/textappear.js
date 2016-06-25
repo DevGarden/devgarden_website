@@ -45,21 +45,4 @@ $(document).ready(function() {
            $('#hidden-text5').removeClass('animated fadeInDown');
          }
        );
-   //
-  //  $('#image_2').hover(function() {
-  //      $('.hidden-text2').toggleClass('animated fadeInDown')
-  //  });
-   //
-  //  $('#image_3').hover(function() {
-  //      $('.hidden-text3').toggleClass('animated fadeInDown')
-  //  });
-   //
-  //  $('#image_4').hover(function() {
-  //      $('.hidden-text4').toggleClass('animated fadeInDown')
-  //  });
-   //
-  //  $('#image_5').hover(function() {
-  //      $('.hidden-text5').toggleClass('animated fadeInDown')
-  //  });
-
 });

@@ -3,6 +3,7 @@
   %div.section
 
     %div.contact-btn{ "id" => "contact-us" } contact us
+    %div.success-btn{ "id" => "success" } success!
 
     = render 'contacts/form'
 
@@ -12,9 +13,9 @@
         %div.hamburger-inner
       %div.dropdown-content
         %a{ 'href' => '/portfolio'}
-          %span.link-underline portfolio
+          %span.link-underline clients
         %a{ 'href' => '/team'}
-          %span.link-underline team
+          %span.link-underline about us
         %a{ 'href' => '#sign-in', 'data-toggle' => 'modal'}
           %span.link-underline sign in
 
@@ -24,7 +25,7 @@
 
     %div.cover-heading
       = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center hidden-sm hidden-xs'
-      = image_tag "thumbsup.png", :class => 'gnomelee-thumb gnomelee-hide img-responsive center-block center hidden-xs'
+      = image_tag "thumbsup.png", :class => 'gnomelee-thumb img-responsive center-block center hidden-xs'
     %h2.black.guiding.center guiding clients to a digital future
 
 
@@ -53,81 +54,79 @@
         %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
 
   %div.section
+    .container
 
-    %h3.interested i am interested in...
-    %div.row.interests
-      %div.col-md-offset-2.col-md-2.col-sm-6.interest-holder{'id' => 'iot'}
-        = image_tag "iot.png", :class => "img-responsive interest-img"
-      %div.col-md-2.col-sm-6.interest-holder{'id' => 'businessprocesses'}
-        = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
-      %div.col-md-2.col-sm-6.interest-holder{'id' => 'dataintegration'}
-        = image_tag "dataintegration.png", :class => "img-responsive interest-img"
-      %div.col-md-2.col-sm-6.interest-holder{'id' => 'mobileandenterprise'}
-        = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
+      %div.row.interested-row
+        %div.col-md-12.interested{'id' => 'tag1'} i am interested in...
+        %div.col-md-12.interested{'id' => 'tag2'} i am working on...
+        %div.col-md-12.interested{'id' => 'tag3'} our team is in need of...
+        %div.col-md-12.interested{'id' => 'tag4'} show me your work in...
+        %div.col-md-12.interested{'id' => 'tag5'} we need help with...
+
+      %div.row.interests
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'iot'}
+          = image_tag "iot.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'businessprocesses'}
+          = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'dataintegration'}
+          = image_tag "dataintegration.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'mobileandenterprise'}
+          = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
 
     .container
       %div.row.project-row.hidden-xs
         %div.iot-container.hide
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.veristride.logo-img
-            %button.btn.project-button.left-button
-              = link_to 'see project', portfolio_path("veristride"), :remote => true
+            = link_to 'see project', portfolio_path("veristride"), :class => "btn project-button left-button", :remote => true
+
           %div.col-md-2.col-sm-2.col-xs-2.project-col
             %div.logo-img
+
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.datamurallogo.logo-img
-            %button.btn.project-button.right-button
-              = link_to 'see project', portfolio_path("datamural"), :remote => true
+            = link_to 'see project', portfolio_path("datamural"), :class => "btn project-button right-button", :remote => true
 
 
         %div.businessprocesses-container.hide
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.grantminerlogo.logo-img
-            %button.btn.project-button.left-button
-              = link_to 'see project', portfolio_path("grantminer"), :remote => true
+            = link_to 'see project', portfolio_path("grantminer"), :class => "btn project-button left-button", :remote => true
 
           %div.col-md-2.col-sm-2.col-xs-2.project-col
             %div.sustain3logo.logo-img
-            %button.btn.project-button.center-button
-              = link_to 'see project', portfolio_path("sustain3"), :remote => true
+            = link_to 'see project', portfolio_path("sustain3"), :class => "btn project-button center-button", :remote => true
 
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.ezliftlogo.logo-img
-            %button.btn.project-button.right-button
-              = link_to 'see project', portfolio_path("ezlift"), :remote => true
+            = link_to 'see project', portfolio_path("ezlift"), :class => "btn project-button right-button", :remote => true
 
 
         %div.dataintegration-container.hide
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.dispatchlogo.logo-img
-            %button.btn.project-button.left-button
-              = link_to 'see project', portfolio_path("dispatch"), :remote => true
+            = link_to 'see project', portfolio_path("dispatch"), :class => "btn project-button left-button", :remote => true
 
           %div.col-md-2.col-sm-2.col-xs-2.project-col
             %div.traclogo.logo-img
-            %button.btn.project-button.center-button
-              = link_to 'see project', portfolio_path("tracteam"), :remote => true
+            = link_to 'see project', portfolio_path("tracteam"), :class => "btn project-button center-button", :remote => true
 
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.grocerygameplanlogo.logo-img
-            %button.btn.project-button.right-button
-              = link_to 'see project', portfolio_path("grocerygameplan"), :remote => true
+            = link_to 'see project', portfolio_path("grocerygameplan"), :class => "btn project-button right-button", :remote => true
 
         %div.mobileandenterprise-container.hide
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.oilcommandlogo.logo-img
-            %button.btn.project-button.left-button
-              = link_to 'see project', portfolio_path("oilcommand"), :remote => true
+            = link_to 'see project', portfolio_path("oilcommand"), :class => "btn project-button left-button", :remote => true
 
           %div.col-md-2.col-sm-2.col-xs-2.project-col
             %div.sustain3logo.logo-img
-            %button.btn.project-button.center-button
-              = link_to 'see project', portfolio_path("sustain3"), :remote => true
+            = link_to 'see project', portfolio_path("sustain3"), :class => "btn project-button center-button", :remote => true
 
           %div.col-md-5.col-sm-5.col-xs-5.project-col
             %div.vundertvlogo.logo-img
-            %button.btn.project-button.right-button
-              = link_to 'see project', portfolio_path("vundertv"), :remote => true
+            = link_to 'see project', portfolio_path("vundertv"), :class => "btn project-button right-button", :remote => true
 
 
 #project-modal.modal

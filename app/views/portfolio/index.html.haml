@@ -1,79 +1,112 @@
-%div.section
+%div.contact-btn{ "id" => "contact-us" } contact us
+%div.success-btn{ "id" => "success" } success!
 
-  %div.contact-btn{ "id" => "contact-us" } contact us
-  = render 'contacts/form'
+= render 'contacts/form'
 
-  %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
-    %div.hamburger-box
-      %div.hamburger-inner
-    %div.dropdown-content
-      %a{ 'href' => '/portfolio'}
-        %span.link-underline portfolio
-      %a{ 'href' => '/team'}
-        %span.link-underline team
-      %a{ 'href' => '/'}
-        %span.link-underline home
+%button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+  %div.hamburger-box
+    %div.hamburger-inner
+  %div.dropdown-content
+    %a{ 'href' => '/portfolio'}
+      %span.link-underline clients
+    %a{ 'href' => '/team'}
+      %span.link-underline about us
+    %a{ 'href' => '/'}
+      %span.link-underline home
 
 
-  %h3.center portfolio
+%h3.center clients
 
-  .container
+.container
 
-    %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
+  %div.row.team-row
+    %div.col-md-2.col-md-offset-3.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("veristride"), :remote => true do
           %div.pic.veristride
         %end
-      %div.col-md-2.col-sm-2.col-xs-12
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("datamural"), :remote => true do
           %div.pic.datamurallogo
         %end
-      %div.col-md-5.col-sm-5.col-xs-12
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("grantminer"), :remote => true do
           %div.pic.grantminerlogo
         %end
 
-    %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
+  %div.row.team-row
+    %div.col-md-2.col-md-offset-3.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("ezlift"), :remote => true do
           %div.pic.ezliftlogo
         %end
-      %div.col-md-2.col-sm-2.col-xs-12
+
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("vundertv"), :remote => true do
           %div.pic.vundertvlogo
         %end
-      %div.col-md-5.col-sm-5.col-xs-12
+
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("dispatch"), :remote => true do
           %div.pic.dispatchlogo
         %end
 
-    %div.row.team-row
-      %div.col-md-5.col-sm-5.col-xs-12
+  %div.row.team-row
+    %div.col-md-2.col-md-offset-3.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("sustain3"), :remote => true do
           %div.pic.sustain3logo
         %end
-      %div.col-md-2.col-sm-2.col-xs-12
+
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("grocerygameplan"), :remote => true do
           %div.pic.grocerygameplanlogo
-        %end
-      %div.col-md-5.col-sm-5.col-xs-12
+      %end
+
+    %div.col-md-2.col-xs-12
+      %div.clickable-space
         = link_to portfolio_path("oilcommand"), :remote => true do
           %div.pic.oilcommandlogo
         %end
 
-      %div.row.team-row
-        %div.col-md-5.col-sm-5.col-xs-12
+    %div.row.team-row
+      %div.col-md-2.col-md-offset-3.col-xs-12
+        %div.clickable-space
           = link_to portfolio_path("tracteam"), :remote => true do
             %div.pic.traclogo
           %end
-        %div.col-md-2.col-sm-2.col-xs-12
+      %div.col-md-2.col-xs-12
+        %div.clickable-space
           = link_to portfolio_path("digitaldensity"), :remote => true do
             %div.pic.digitaldensitylogo
           %end
-        %div.col-md-5.col-sm-5.col-xs-12
+      %div.col-md-2.col-xs-12
+        %div.clickable-space
           = link_to portfolio_path("ims"), :remote => true do
             %div.pic.imslogo
           %end
+
+      %div.row.team-row
+        %div.col-md-2.col-md-offset-3.col-xs-12
+          %div.clickable-space
+            = link_to portfolio_path("iveenamed"), :remote => true do
+              %div.pic.iveenamedlogo
+            %end
+        %div.col-md-2.col-xs-12
+          %div.clickable-space
+            = link_to portfolio_path("innovationarts"), :remote => true do
+              %div.pic.innovationartslogo
+            %end
+        %div.col-md-2.col-xs-12
+          %div.clickable-space
+            = link_to portfolio_path("lunasoft"), :remote => true do
+              %div.pic.lunasoftlogo
+            %end
 
 
 #project-modal.modal
