@@ -4,13 +4,10 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'DevGarden'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'DevGarden'}"}
-    %link{:href => "jquery.fullPage.css", :rel => "stylesheet", :type => "text/css"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-
-    = render 'favicon'
 
 
     - if user_signed_in?

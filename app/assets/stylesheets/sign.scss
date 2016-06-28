@@ -1,0 +1,40 @@
+.sign-in-form {
+  position: fixed;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  z-index: 9999;
+  box-shadow: 2px 2px 9px #888888;
+  width: 100%;
+  padding-right: 10px;
+
+}
+
+.modal-body-sign {
+  padding: 0;
+}
+
+.modal-content-sign {
+  border: none;
+}
+
+
+.sign-in-btn {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  font-size: 20px;
+  border-radius: 3px;
+  line-height: 90%;
+}
+
+input[type="checkbox"]:checked:after,
+.checkbox input[type="checkbox"]:checked:after,
+.checkbox-inline input[type="checkbox"]:checked:after {
+  background-color: #523795;
+  border-color: #523795;
+}

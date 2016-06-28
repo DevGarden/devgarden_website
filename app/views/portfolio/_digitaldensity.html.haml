@@ -8,7 +8,8 @@
           .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
           .col-md-11.col-xs-9.company-div.title
-            = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px" 
+            %a{:href => 'http://www.google.com', :target => '_blank'}
+              = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px", :title => 'blah blah blah'
 
 
         %div.row.details
@@ -21,6 +22,9 @@
 
             %h4.headings services
             %p.paragraphs Developing Hardware & Software <br> Valuation, Service Offering Development
+
+            = link_to 'download white paper', portfolio_path("digitaldensity"), :class => "btn white-paper-button left-button", :remote => true
+
 
           %div.col-md-6.col-xs-12.details-gallery
             #myCarousel.carousel.slide{"data-ride" => "carousel"}
@@ -44,5 +48,6 @@
               %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
                 %span.glyphicon.glyphicon-chevron-right.black{"aria-hidden" => "true"}
                 %span.sr-only Next
+
 
     .modal-footer

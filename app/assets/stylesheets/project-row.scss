@@ -9,8 +9,6 @@
 }
 
 .project-col {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -19,17 +17,24 @@
   margin-right: auto;
 }
 
-.left-button {
+.project-button {
   margin-top: 12px;
-
+  line-height: 100%;
+  padding: 5px 5px 5px 5px;
+  background-color: black;
+  color: white;
+  font-size: 22px;
+  text-transform: lowercase;
+  border-radius: 3px;
 }
 
-.center-button {
+.project-col a {
   margin-top: 12px;
+  display: inline-block;
 }
 
-.right-button {
-  margin-top: 12px;
+.project-col a:hover {
+  background-color: #523795;
 }
 
 .clickable-space {
@@ -38,13 +43,6 @@
   margin-top: 38px;
   height: 150px;
   width: 150px;
-}
-
-.project-button {
-  background-color: black;
-  color: white;
-  font-size: 22px;
-  text-transform: lowercase;
 }
 
 .veristride {

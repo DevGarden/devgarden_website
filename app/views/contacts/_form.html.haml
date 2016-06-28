@@ -1,5 +1,5 @@
 = simple_form_for Contact.new, :url => contacts_path(:format => :js), :html => {:class => 'contact-form col-md-3 col-xs-8' }, :remote => true do |f|
-  = f.input :name, :label => '', :required => true, :placeholder => 'name:'
+  = f.input :name, :label => '', :autofocus => true, :required => true, :placeholder => 'name:'
   = f.input :message, :label => '', :as => :text, :required => true, :placeholder => 'message:'
   = f.input :email, :label => '', :required => true, :placeholder => 'email:'
   = f.button :submit, 'send away', :class => "btn send-button"

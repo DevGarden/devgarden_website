@@ -39,6 +39,14 @@
   z-index: 90;
 }
 
+.heading-row {
+  height: 65px;
+}
+
+.heading-back {
+  height: inherit;
+}
+
 .portfolio-row {
   height: 65px;
   margin-top: 22px;
@@ -57,6 +65,12 @@
   font-size: 20px;
   margin-top: 0px;
   margin-bottom: 45px;
+}
+
+.white-paper-button {
+  outline-color: black;
+  border: 1px solid black;
+  text-transform: lowercase;
 }
 
 .item {
