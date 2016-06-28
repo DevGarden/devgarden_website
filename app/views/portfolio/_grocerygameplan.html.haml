@@ -8,7 +8,8 @@
           .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
           .col-md-11.col-xs-9.company-div.title
-            = image_tag 'grocerygameplanlogo.png', :class => 'company-img img-responsive', :style => "height: 75px"
+            %a{:href => 'http://www.grocerygameplan.com/', :target => '_blank'}
+              = image_tag 'grocerygameplanlogo.png', :class => 'company-img img-responsive', :style => "height: 75px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'this is a tooltip?'
 
 
         %div.row.details

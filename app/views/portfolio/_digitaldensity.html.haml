@@ -8,8 +8,7 @@
           .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
           .col-md-11.col-xs-9.company-div.title
-            %a{:href => 'http://www.google.com', :target => '_blank'}
-              = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'this is a tooltip?'
+            = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px"
 
 
         %div.row.details
@@ -27,7 +26,7 @@
             %h4.headings services
             %p.paragraphs Developing Hardware & Software <br> Valuation, Service Offering Development
 
-            = link_to 'download white paper', portfolio_path("digitaldensity"), :class => "btn white-paper-button left-button", :remote => true
+            -# = link_to 'download white paper', portfolio_path("digitaldensity"), :class => "btn white-paper-button left-button", :remote => true
 
 
           %div.col-md-6.col-xs-12.details-gallery
