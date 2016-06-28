@@ -9,11 +9,15 @@
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
           .col-md-11.col-xs-9.company-div.title
             %a{:href => 'http://www.google.com', :target => '_blank'}
-              = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px", :title => 'blah blah blah'
+              = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'this is a tooltip?'
 
 
         %div.row.details
           %div.col-md-6.div.col-xs-12.details-text
+
+            %h4.headings digital density
+            %p.paragraphs
+
             %h4.headings project overview
             %p.paragraphs Creating a user device that enables companies to map out the digital density inside of a space; allowing the company to monitor energy output, usage, and how the devices are working together.
 

@@ -7,7 +7,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 12px;
-  z-index: 9999;
   box-shadow: 2px 2px 9px #888888;
   width: 100%;
   padding-right: 10px;
@@ -22,6 +21,9 @@
   border: none;
 }
 
+.sign-in-modal {
+  z-index: 2050;
+}
 
 .sign-in-btn {
   background-color: white;
@@ -30,6 +32,11 @@
   font-size: 20px;
   border-radius: 3px;
   line-height: 90%;
+  text-transform: lowercase;
+}
+
+.buffer {
+  margin-top: 20px;
 }
 
 input[type="checkbox"]:checked:after,

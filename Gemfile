@@ -78,10 +78,6 @@ gem 'skrollr-rails'
 
 gem 'ruby-trello'
 
-group :development do
-  gem 'rails_real_favicon'
-end
-
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'

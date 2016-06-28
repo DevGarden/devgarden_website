@@ -52,4 +52,7 @@ $(document).ready(function() {
     }
   )
 
+  $(function(){
+    $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
+  });
 });

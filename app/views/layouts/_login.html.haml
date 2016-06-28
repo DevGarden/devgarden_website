@@ -1,4 +1,4 @@
-%div
+%div{'id' => 'fullpage'}
 
   %section
 
@@ -41,7 +41,7 @@
       %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
         = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
 
-    %div.row.hidden-text
+    %div.row.hidden-text.hidden-xs.hidden-sm
       %div.col-md-2.col-md-offset-1
         %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
       %div.col-md-2
@@ -57,11 +57,11 @@
     .container
 
       %div.row.interested-row
-        %div.col-md-12.interested{'id' => 'tag1'} i am interested in...
-        %div.col-md-12.interested{'id' => 'tag2'} i am working on...
-        %div.col-md-12.interested{'id' => 'tag3'} our team is in need of...
-        %div.col-md-12.interested{'id' => 'tag4'} show me your work in...
-        %div.col-md-12.interested{'id' => 'tag5'} we need help with...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag1'} i am interested in...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag2'} i am working on...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag3'} our team is in need of...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag4'} show me your work in...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag5'} we need help with...
 
       %div.row.interests
         %div.col-md-3.col-sm-6.interest-holder{'id' => 'iot'}
@@ -76,62 +76,62 @@
     .container
       %div.row.project-row.hidden-xs
         %div.iot-container.hide
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.col-md-offset-3.project-col
             %div.veristride.logo-img
             = link_to 'see project', portfolio_path("veristride"), :class => "project-button", :remote => true
 
-          %div.col-md-2.col-sm-2.col-xs-2.project-col
+          %div.col-md-2.project-col
             %div.logo-img
 
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.project-col
             %div.datamurallogo.logo-img
             = link_to 'see project', portfolio_path("datamural"), :class => "project-button", :remote => true
 
 
         %div.businessprocesses-container.hide
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.col-md-offset-3.project-col
             %div.grantminerlogo.logo-img
             = link_to 'see project', portfolio_path("grantminer"), :class => "project-button", :remote => true
 
-          %div.col-md-2.col-sm-2.col-xs-2.project-col
+          %div.col-md-2.project-col
             %div.sustain3logo.logo-img
             = link_to 'see project', portfolio_path("sustain3"), :class => "project-button", :remote => true
 
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.project-col
             %div.ezliftlogo.logo-img
             = link_to 'see project', portfolio_path("ezlift"), :class => "project-button", :remote => true
 
 
         %div.dataintegration-container.hide
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.col-md-offset-3.project-col
             %div.dispatchlogo.logo-img
             = link_to 'see project', portfolio_path("dispatch"), :class => "project-button", :remote => true
 
-          %div.col-md-2.col-sm-2.col-xs-2.project-col
+          %div.col-md-2.project-col
             %div.traclogo.logo-img
             = link_to 'see project', portfolio_path("tracteam"), :class => "project-button", :remote => true
 
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.project-col
             %div.grocerygameplanlogo.logo-img
             = link_to 'see project', portfolio_path("grocerygameplan"), :class => "project-button", :remote => true
 
         %div.mobileandenterprise-container.hide
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.col-md-offset-3.project-col
             %div.oilcommandlogo.logo-img
             = link_to 'see project', portfolio_path("oilcommand"), :class => "project-button", :remote => true
 
-          %div.col-md-2.col-sm-2.col-xs-2.project-col
+          %div.col-md-2.project-col
             %div.sustain3logo.logo-img
             = link_to 'see project', portfolio_path("sustain3"), :class => "project-button", :remote => true
 
-          %div.col-md-5.col-sm-5.col-xs-5.project-col
+          %div.col-md-2.project-col
             %div.vundertvlogo.logo-img
             = link_to 'see project', portfolio_path("vundertv"), :class => "project-button", :remote => true
 
 
 #project-modal.modal
 
-#sign-in.modal.fade{:role => "dialog"}
+#sign-in.modal.sign-in-modal.fade{:role => "dialog"}
   .modal-dialog
     .modal-content.modal-content-sign
       .modal-body.modal-body-sign

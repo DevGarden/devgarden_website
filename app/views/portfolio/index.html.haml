@@ -17,13 +17,12 @@
 
 
 .container
-
-  %div.row
-    %div.col-md-2.col-md-offset-3.heading-back
-      = link_to 'back', root_path
-    %div.col-md-2
-      %h4 clients
-    %div.col-md-2
+  %div.row.portfolio-row
+    .col-md-2.col-md-offset-3.col-xs-1.col-xs-offset-1.back-img
+      %a.back-btn-heading{ :href => '/' }
+        = image_tag 'back-btn.png', :class => 'img-responsive, back-btn-heading'
+    .col-md-2.col-xs-7.about-us
+      %p.about-us-title clients
 
   %div.row
     %div.col-md-2.col-md-offset-3

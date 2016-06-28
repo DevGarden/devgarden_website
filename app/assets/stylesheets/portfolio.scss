@@ -12,6 +12,22 @@
   background-image: url('background.png');
 }
 
+.modal-row div {
+  cursor: default;
+}
+
+.about-us-title {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 35px;
+}
+
+.about-us {
+  display: table;
+  height: inherit;
+  text-align: center;
+}
+
 .company-img {
   position: absolute;
   margin: auto;
@@ -19,6 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  color: black;
 }
 
 .title {
@@ -26,6 +43,15 @@
 }
 
 .back-btn {
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.back-btn-heading {
+  padding-left: 8px;
   height: 25px;
   margin: 0;
   position: absolute;
@@ -49,7 +75,7 @@
 
 .portfolio-row {
   height: 65px;
-  margin-top: 22px;
+  margin-top: 50px;
 }
 
 .details {
@@ -108,4 +134,13 @@
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.tooltip-inner {
+  background-color: #523795;
+  color: white;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #523795;
 }
