@@ -1,167 +1,139 @@
-%div.site-wrapper
+%div
 
-  :javascript
-    new WOW({mobile: false}).init();
+  %div.section
 
+    %div.contact-btn{ "id" => "contact-us" } contact us
+    %div.success-btn{ "id" => "success" } success!
 
-  %div.site-wrapper-inner
-    
-
-    %div.cover-container
-
-      .container
-        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        = link_to image_tag('dg_logo.png', :class => 'logo'), root_path, :class => 'navbar-brand'
-        
-        .collapse.navbar-collapse
-          %ul.nav.navbar-nav.navbar-right  
-            %li 
-              = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
-            %li 
-              = link_to 'Contact', contact_path, :class => 'pull-right navbar-btn contact'
-      %div.inner.cover.center.container
-        = render 'layouts/messages'
-        
-        .animated.fadeInUp
-          %h1.cover-heading.space 
-            Welcome to 
-            %span CrushTopia. 
-          %h3.white A land of magic and great software!
-          
-          %i.scroll.fa.fa-chevron-down{'href' => '#first'}
-        
-        %p.lead 
-          
-    
-        
-    %div.col-md-12.fp-ht.fp-first.fp-long
-      .container.icons-top.center
-        .col-md-4
-          %i.fa.fa-compass
-          %h3 Strategic.
-          %p We think on a system-level to make sure we create the most leverage with our products.
-        .col-md-4
-          %i.fa.fa-graduation-cap
-          %h3 Intelligent.
-          %p We simply hire the best minds in the business. 
-        .col-md-4
-          %i.fa.fa-connectdevelop
-          %h3 Connected.
-          %p We play in the internet of things. Ask us about our thoughts on deployed sensors sometime.
-
-        .col-md-12.fp-title
-          %h1 So, why work with us?
-    
-    %div.slide-one.col-lg-12.fp-ht.wow.slideInLeft{"data-wow-delay" =>"0.15s"}
-      .container
-        .row
-          .col-md-3.col-md-offset-1.mob-center
-            %i.thumb.fa.fa-thumbs-o-up
-          .col-md-8
-            %h3.pink Doing business with us is easy.​​
-            %p We are a force multiplier for your business goals. We bring you effective, efficient processes throughout development with no red tape or wasted time.
-
-    %div.col-md-12.fp-ht
-      .container.pull-right.wow.slideInRight{"data-wow-delay" =>"0.15s"}
-        .row
-          .col-sm-3.col-md-offset-1.col-sm-push-7.mob-center
-            %i.rocket.fa.fa-rocket
-          .col-sm-7.col-sm-pull-3
-            %h3.purple Iterative development from concept to deployment.​
-            %p  We’re builders and problem solvers at heart with a bias towards action. We strive to get a working prototype into your hands fast​, that allows you to implement, iterate, and re­deploy better and better products.
-          
-
-    %div.col-md-12.fp-ht.wow.slideInLeft{"data-wow-delay" =>"0.15s"}
-      .container
-        .row
-          .col-md-3.col-md-offset-1.mob-center
-            %i.cogs.fa.fa-cogs
-          .col-md-7
-            %h3.pink We know business, technology, and product development.​
-            %p The talent across our team is immense. Our development services range from technology consulting and business analysis to QA, application maintenance and solution integration. We have full­stack capabilities.
-    %div.col-md-12.fp-ht.wow.slideInRight
-      .container.pull-right
-        .row
-          .col-sm-3.col-md-offset-1.col-sm-push-7.mob-center
-            %i.signs.fa.fa-map-signs
-          .col-sm-7.col-sm-pull-3
-            %h3.purple We provide scalable, future­proof products.​
-            %p We pair agile development with scalable technology, so that when you’re successful, your software adapts. We architect systems that work now and in the future.
-          
-    %div.col-md-12.fp-ht.wow.slideInLeft
-      .container
-        .row
-          .col-md-3.col-md-offset-1.mob-center
-            %i.ring.fa.fa-life-ring
-          .col-md-7
-            %h3.turquoise We work as an extension of your team.​
-            %p We don’t pay lip service to collaboration. We sit next to you at your desk. We meet your customers. We work as part of your team to bolster your vision.
-    / %div.col-md-12.fp-ht.wow.slideInRight
-    /   .container.pull-right
-    /     .row
-    /       .col-md-9
-    /         %h2 We do business-case­-centric development.​
-    /         %h3 Our experience in understanding how your development project serves your business helps guide development to meet your business objectives.
-    /       .col-md-3
-    /         %i.thumb.fa.fa-rocket
-    / %div.col-md-12.fp-ht.wow.slideInLeft
-    /   .container
-    /     .row
-    /       .col-md-3
-    /         %i.thumb.fa.fa-rocket
-    /       .col-md-9
-    /         %h2 We operate our company with integrity.​
-    /         %h3 We thrive on open and honest communication. Your business means everything to us. Expect honesty and authenticity through and through.
-    / %div.col-md-12.fp-ht.wow.slideInRight
-    /   .container.pull-right
-    /     .row
-    /       .col-md-9
-    /         %h2 Our process management is transparent and open.​
-    /         %h3 The tools we use are always accessible to you so you know what’s going on with your project.
-    /       .col-md-3
-    /         %i.thumb.fa.fa-rocket
-    / %div.col-md-12.fp-ht.wow.slideInLeft
-    /   .container
-    /     .row
-    /       .col-md-3
-    /         %i.thumb.fa.fa-rocket
-    /       .col-md-9
-    /         %h2 We provide full cycle product support.​
-    /         %h3 The DevGarden software development process supports you at every stage of product evolution – from ideation to product implementation on the cloud, ongoing support, and maintenance.
-
-    / %div.modal.fade#sign-in
-    /   %div.modal-dialog
-    /     %div.modal-content
-    /       %div.modal-header
-    /         %button.close{"data-dismiss" => "modal", :type => "button", "aria-label" => "Close"}
-    /           %span{"aria-hidden" => "true"} &times;
-              
-    /         %div.modal-body
-    /           = render 'layouts/signin'
+    = render 'contacts/form'
 
 
-#sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog{:role => "document"}
-    .modal-content
-      .modal-header
-        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} &times;
-      .modal-body
+    %button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+      %div.hamburger-box
+        %div.hamburger-inner
+      %div.dropdown-content
+        %a{ 'href' => '/portfolio'}
+          %span.link-underline clients
+        %a{ 'href' => '/team'}
+          %span.link-underline about us
+        %a{ 'href' => '#sign-in', 'data-toggle' => 'modal'}
+          %span.link-underline sign in
+
+    -#
+    -# %div.inner.cover.center
+    -#   = render 'layouts/messages'
+
+    %div.cover-heading
+      = image_tag "gnomelee.png", :class => 'gnomelee img-responsive center-block center'
+      = image_tag "thumbsup.png", :class => 'gnomelee-thumb img-responsive center-block center'
+    %h2.black.guiding.center guiding clients to a digital future
+
+
+    %div.row.five-columns-row
+      %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
+        = image_tag "business_services.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
+        = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
+        = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
+        = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
+      %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
+        = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
+
+    %div.row.hidden-text.hidden-xs.hidden-sm
+      %div.col-md-2.col-md-offset-1
+        %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
+      %div.col-md-2
+        %p.hidden-box{ 'id' => 'hidden-text2'} We rapidly model, prototype and iterate solutions.
+      %div.col-md-2
+        %p.hidden-box{ 'id' => 'hidden-text3'} We integrate development with experienced design to reduce errors and improve velocity.
+      %div.col-md-2
+        %p.hidden-box{ 'id' => 'hidden-text4'} We can help value and finance your business, develop your products and connect them to your consumers.
+      %div.col-md-2
+        %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
+
+  %div.section
+    .container
+
+      %div.row.interested-row
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag1'} i am interested in...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag2'} i am working on...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag3'} our team is in need of...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag4'} show me your work in...
+        %div.col-md-12.col-sm-12.col-xs-12.interested{'id' => 'tag5'} we need help with...
+
+      %div.row.interests
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'iot'}
+          = image_tag "iot.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'businessprocesses'}
+          = image_tag "businessprocesses.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'dataintegration'}
+          = image_tag "dataintegration.png", :class => "img-responsive interest-img"
+        %div.col-md-3.col-sm-6.interest-holder{'id' => 'mobileandenterprise'}
+          = image_tag "mobileandenterprise.png", :class => "img-responsive interest-img"
+
+    .container
+      %div.row.project-row.hidden-xs
+        %div.iot-container.hide
+          %div.col-md-2.col-md-offset-3.project-col
+            %div.veristride.logo-img
+            = link_to 'see project', portfolio_path("veristride"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.digitaldensitylogo.logo-img
+            = link_to 'see project', portfolio_path('digitaldensity'), :class => 'project-button', :remote => true
+
+          %div.col-md-2.project-col
+            %div.datamurallogo.logo-img
+            = link_to 'see project', portfolio_path("datamural"), :class => "project-button", :remote => true
+
+
+        %div.businessprocesses-container.hide
+          %div.col-md-2.col-md-offset-3.project-col
+            %div.grantminerlogo.logo-img
+            = link_to 'see project', portfolio_path("grantminer"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.sustain3logo.logo-img
+            = link_to 'see project', portfolio_path("sustain3"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.ezliftlogo.logo-img
+            = link_to 'see project', portfolio_path("ezlift"), :class => "project-button", :remote => true
+
+
+        %div.dataintegration-container.hide
+          %div.col-md-2.col-md-offset-3.project-col
+            %div.dispatchlogo.logo-img
+            = link_to 'see project', portfolio_path("dispatch"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.traclogo.logo-img
+            = link_to 'see project', portfolio_path("tracteam"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.grocerygameplanlogo.logo-img
+            = link_to 'see project', portfolio_path("grocerygameplan"), :class => "project-button", :remote => true
+
+        %div.mobileandenterprise-container.hide
+          %div.col-md-2.col-md-offset-3.project-col
+            %div.oilcommandlogo.logo-img
+            = link_to 'see project', portfolio_path("oilcommand"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.sustain3logo.logo-img
+            = link_to 'see project', portfolio_path("sustain3"), :class => "project-button", :remote => true
+
+          %div.col-md-2.project-col
+            %div.vundertvlogo.logo-img
+            = link_to 'see project', portfolio_path("vundertv"), :class => "project-button", :remote => true
+
+
+#project-modal.modal
+
+#sign-in.modal.sign-in-modal.fade{:role => "dialog"}
+  .modal-dialog
+    .modal-content.modal-content-sign
+      .modal-body.modal-body-sign
         = render 'layouts/signin'
-      
-
-
-
-
-
-
-
-       
-
-
-
-

@@ -10,9 +10,9 @@
       %tr
         %th Client
         %th Name
-        %th Github repo
-        %th Jira project
-        %th Toggle project
+        %th Deployments
+        %th Trello project
+        %th Toggl project
         %th Google drive url
         %th
         %th
@@ -21,12 +21,21 @@
     %tbody
       - @projects.each do |project|
         %tr
-          %td= project.client_id
-          %td= project.name
-          %td= project.github_repo
-          %td= project.jira_project_id
-          %td= project.toggle_project_id
+          %td= link_to project.client.name, project.client
+          %td= link_to project.name, "http://github.com/DevGarden/#{project.name}", target: "_blank"
+          %td
+            -project.deployments.each do |d| 
+              .col-md-6
+                =render "deployments/line_item", d: d 
+          %td
+            -if project.trello_project_id
+              = link_to project.trello_project_id, project
+          %td= project.toggl_project_id
           %td= project.google_drive_url
           %td= link_to 'Show', project
           %td= link_to 'Edit', edit_project_path(project)
           %td= link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete
+
+
+
+

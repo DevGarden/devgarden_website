@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160226222845) do
 
   create_table "deployments", force: :cascade do |t|
     t.integer  "project_id",  limit: 4
-    t.string   "phase",       limit: 255
+    t.integer  "phase",       limit: 4
     t.string   "url",         limit: 255
     t.string   "server_ip",   limit: 255
     t.string   "domain_name", limit: 255
@@ -44,14 +44,14 @@ ActiveRecord::Schema.define(version: 20160226222845) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "client_id",         limit: 255
+    t.integer  "client_id",         limit: 4
     t.string   "name",              limit: 255
-    t.string   "github_repo",       limit: 255
-    t.string   "jira_project_id",   limit: 255
-    t.string   "toggle_project_id", limit: 255
+    t.string   "description",       limit: 1000
+    t.string   "trello_project_id", limit: 255
+    t.string   "toggl_project_id",  limit: 255
     t.string   "google_drive_url",  limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "users", force: :cascade do |t|

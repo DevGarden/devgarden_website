@@ -13,7 +13,7 @@ module DevgardenHome
     # -- all .rb files in that directory are automatically loaded.
 
     config.generators do |g|
-      g.orm :active_record     
+      g.orm :active_record
       g.test_framework :rspec,
         fixtures: true,
         view_specs: false,
@@ -36,6 +36,6 @@ module DevgardenHome
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.assets.paths << Rails.root.join('/app/assets/fonts')
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

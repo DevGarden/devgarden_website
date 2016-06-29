@@ -1,5 +1,5 @@
 class DeploymentsController < ApplicationController
-  before_action :set_deployment, only: [:show, :edit, :update, :destroy]
+  before_action :set_deployment, only: [:show, :edit, :update, :destroy, :check_server_status]
 
   # GET /deployments
   # GET /deployments.json
@@ -19,6 +19,10 @@ class DeploymentsController < ApplicationController
 
   # GET /deployments/1/edit
   def edit
+  end
+
+  def check_server_status
+    render json: @deployment.check_server_status
   end
 
   # POST /deployments

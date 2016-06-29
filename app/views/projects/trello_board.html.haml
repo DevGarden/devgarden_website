@@ -1,0 +1,16 @@
+
+-@trello_board.lists.each do |l| 
+  .panel.panel-success
+    .panel-heading
+      .panel-title=l.name
+    .panel-body
+      %ul
+        -l.cards.each do |c| 
+          %li
+            %h5
+              =c.name
+              %small
+                =c.desc.gsub("\n", "<br/>").html_safe
+            -if params[:debug] == "true"
+              .info=c.attributes
+

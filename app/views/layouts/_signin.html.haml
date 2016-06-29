@@ -1,15 +1,13 @@
 .authform
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f|
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form', :class => 'sign-in-form'}) do |f|
     = devise_error_messages!
     .form-group
-      = f.label :email
-      = f.email_field :email, :autofocus => true, class: 'form-control'
+      = f.email_field :email, :autofocus => true, class: 'form-control', :placeholder => 'email'
     .form-group
-      = f.label :password
-      = f.password_field :password, class: 'form-control'
+      = f.password_field :password, class: 'form-control', :placeholder => 'password:'
       - if devise_mapping.recoverable?
-        = link_to "Forgot password?", new_password_path(resource_name), class: 'right black'
-    = f.submit 'Sign in', :class => 'btn btn-success right'
+        = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
+    = f.submit 'Sign in', :class => 'btn-default sign-in-btn right'
     - if devise_mapping.rememberable?
       .checkbox{:style => "width:150px"}
         %label

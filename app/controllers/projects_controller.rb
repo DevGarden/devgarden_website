@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :trello_board]
+
+  layout false, only: [:trello_board] 
 
   # GET /projects
   # GET /projects.json
@@ -10,6 +12,13 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+     # @trello_board.lists
+    # @trello_board.cards
+    # etc...
+  end
+
+  def trello_board
+    @trello_board = Trello::Board.find( @project.trello_project_id) if @project.trello_project_id\
   end
 
   # GET /projects/new
@@ -20,6 +29,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1/edit
   def edit
   end
+
+
 
   # POST /projects
   # POST /projects.json
@@ -69,6 +80,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:client_id, :name, :github_repo, :jira_project_id, :toggle_project_id, :google_drive_url)
+      params.require(:project).permit(:client_id, :name, :github_repo, :trello_project_id, :toggl_project_id, :google_drive_url)
     end
 end
