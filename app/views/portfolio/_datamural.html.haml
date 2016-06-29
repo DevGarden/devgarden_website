@@ -9,7 +9,7 @@
             = image_tag('back-btn.png', :class => "back-btn img-responsive")
           .col-md-11.col-xs-9.title
             %a{:href => 'http://datamural.com', :target => '_blank'}
-              = image_tag 'datamurallogo.png', :class => 'company-img img-responsive', :style => "height: 135px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'this is a tooltip?'
+              = image_tag 'datamurallogo.png', :class => 'company-img img-responsive', :style => "height: 135px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'check out our site!'
 
 
         %div.row.details
@@ -19,10 +19,10 @@
             %p.paragraphs
 
             %h4.headings project overview
-            %p.paragraphs Data Mural maps the geographic extent of the occurrence of health conditions like infectious disease using Point of Care (POC) Diagnostic Sensors.
+            %p.paragraphs Data Mural integratres infectious disease from large historical databases, emerging Point-Of-Care (POC) diagnostic sensors, and public health data enables users to map, explore, and analize this data for population health management and resource allocation.
 
             %h4.headings work
-            %p.paragraphs DEVGARDEN developed the patient database for the use in the field and an indexing method that allows users to create virtual databases of data they wish to use in evaluating clinical information.
+            %p.paragraphs DEVGARDEN developed a patient database for input of POC data into Data Mural. DEVGARDEN is working with Data Mural to create an integration engine that maps this POC data along with data from public health databases to understand the geospatial distribution of infectious disease cases.
 
             %h4.headings services
             %p.paragraphs Data Integration, Experience Design <br> Business Services, Software Engineering <br> Innovation Accelerator, Impact Measurement
@@ -33,6 +33,7 @@
               %ol.carousel-indicators
                 %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
                 %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+                %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
 
               / Wrapper for slides
               .carousel-inner{:role => "listbox"}
@@ -40,6 +41,8 @@
                   = image_tag 'datamuralmac.png'
                 .item
                   = image_tag 'datamural_1.png'
+                .item
+                  = image_tag 'datamuralindia.png'
 
 
               / Left and right controls
