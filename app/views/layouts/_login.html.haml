@@ -1,6 +1,6 @@
-%div{'id' => 'fullpage'}
+%div
 
-  %section
+  %div.section
 
     %div.contact-btn{ "id" => "contact-us" } contact us
     %div.success-btn{ "id" => "success" } success!
@@ -53,7 +53,7 @@
       %div.col-md-2
         %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
 
-  %section
+  %div.section
     .container
 
       %div.row.interested-row
@@ -81,7 +81,8 @@
             = link_to 'see project', portfolio_path("veristride"), :class => "project-button", :remote => true
 
           %div.col-md-2.project-col
-            %div.logo-img
+            %div.digitaldensitylogo.logo-img
+            = link_to 'see project', portfolio_path('digitaldensity'), :class => 'project-button', :remote => true
 
           %div.col-md-2.project-col
             %div.datamurallogo.logo-img

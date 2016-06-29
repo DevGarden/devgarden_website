@@ -28,19 +28,12 @@
               / Indicators
               %ol.carousel-indicators
                 %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-                %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-                %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-                %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+
               / Wrapper for slides
               .carousel-inner{:role => "listbox"}
                 .item.active
-                  = image_tag 'hamstertest.jpeg'
-                .item
-                  = image_tag 'impactmanagement.png'
-                .item
-                  = image_tag 'hamstertest.jpeg'
-                .item
-                  = image_tag 'gnomelee.png'
+                  = image_tag 'vundertvlogo.png'
+
               / Left and right controls
               %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
                 %span.glyphicon.glyphicon-chevron-left.black{"aria-hidden" => "true"}
