@@ -1,0 +1,5 @@
+.form-group{class: attribute.errors? ? "has-error" : ""}
+  %label{for: attribute.form_id}
+    = attribute.label_name
+
+  = form_builder.check_box(attribute.name, value: boolean, class: "boolean", disabled: !attribute.editable?)
