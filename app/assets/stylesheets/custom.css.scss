@@ -8,11 +8,11 @@
 
 $logo: 'Patua One', cursive;
 
-$font-stack: 'Montserrat','Helvetica Neue',Arial,sans-serif;
-
 $pink: #CB8EBE;
 
 $purple: #523795;
+
+$font-stack: 'Montserrat','Helvetica Neue',Arial,sans-serif;
 
 $turquoise: #66B8F2;
 
@@ -20,9 +20,13 @@ $blue: #007FFF;
 
 
 @font-face {
-font-family: 'bernier';
-src: asset_url('bernier.otf');
+  font-family: 'bernier';
+  src: asset_url('bernier.otf') format('opentype');
+}
 
+@font-face {
+  font-family: 'typewcond';
+  src: asset_url('typewcond.otf') format('opentype');
 }
 
 
@@ -32,11 +36,13 @@ html {
 }
 
 body {
-    font-family: $font-stack;
+    font-family: 'bernier', $font-stack;
     color: #001A33;
     webkit-tap-highlight-color: #222;
     top:0;
-    margin-bottom: 60px;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
 }
 
 h1, h2, h3, h4 {
@@ -73,11 +79,12 @@ a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    white-space: nowrap;
 }
 
 a:hover,
 a:focus {
-    color: #222;
+    color: white;
     outline: 0;
 }
 
@@ -85,12 +92,10 @@ p {
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: 20px;
-    font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
     font-weight: 400;
 }
 
 .text-normal {
-    font-family:'Helvetica Neue',Arial,sans-serif;
 }
 
 .wide-space {
@@ -129,10 +134,6 @@ p {
 
 .text-primary {
     color: #007FFF;
-}
-
-section {
-    padding: 70px 0;
 }
 
 aside {
@@ -224,7 +225,7 @@ footer h4, footer h6 {
     .navbar-default .navbar-brand:focus {
         color: #001A33;
     }
-    
+
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
         color: #001A33;
@@ -241,7 +242,7 @@ footer h4, footer h6 {
     #topNav {
       background-color:#fff;
     }
-    
+
 }
 
 header {
@@ -277,7 +278,7 @@ header .header-content .inner p {
     .icon-lg {
         font-size: 80px;
     }
-    
+
     header {
         min-height: 100%;
     }
@@ -307,10 +308,10 @@ header .header-content .inner p {
         max-width: 80%;
         font-size: 18px;
     }
-    
+
     section {
         min-height: 600px;
-        padding: 100px 0;
+        padding: 0;
     }
 
 }
@@ -333,7 +334,7 @@ textarea {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-    color:#007FFF;
+    color: #007FFF;
 }
 
 .btn.btn-primary:hover {
@@ -412,7 +413,7 @@ img::-moz-selection {
 }
 
 .text-normal {
-    font-family: 'bernier', $font-stack;
+    font-family: 'bernier';
     font-size: 30px;
     color: #000;
     opacity: 0.2;
@@ -461,6 +462,11 @@ color: #468847;
 text-align: center;
 }
 
+.alert-danger {
+  background-color: $purple;
+  margin-bottom: 15px;
+}
+
 
 .top {
     margin-top: 50px;
@@ -495,7 +501,7 @@ text-align: center;
   #footer {
     position: absolute;
     bottom: 0;
-    width: 100%;  
+    width: 100%;
     height: 60px;
     margin-top: 100px;
     background-color: #f5f5f5;
@@ -505,77 +511,367 @@ text-align: center;
     padding: 25px;
 }
 
-.cover-container {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height: 100vh;
-    background: #7A4BF8; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #CB8EBE 0%, #7A4BF8 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7A4BF8 ), color-stop(100%,#7A4BF8)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  #CB8EBE 0%,#7A4BF8 100%); /* W3C */
-    
-    i {
-        font-size: 24px;
-        color: #fff;
-        padding-top: 30px;
-    }
+// .cover-container {
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     min-height: 100vh;
+//     background: #7A4BF8; /* Old browsers */
+//     background: -moz-radial-gradient(center, ellipse cover,  #CB8EBE 0%, #7A4BF8 100%); /* FF3.6+ */
+//     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7A4BF8 ), color-stop(100%,#7A4BF8)); /* Chrome,Safari4+ */
+//     background: -webkit-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Chrome10+,Safari5.1+ */
+//     background: -o-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* Opera 12+ */
+//     background: -ms-radial-gradient(center, ellipse cover,  #CB8EBE 0%,#7A4BF8 100%); /* IE10+ */
+//     background: radial-gradient(ellipse at center,  #CB8EBE 0%,#7A4BF8 100%); /* W3C */
+//
+//     i {
+//         font-size: 24px;
+//         color: #fff;
+//         padding-top: 30px;
+//     }
+//
+//     i.back {
+//         font-size: 38px;
+//         padding-top: 0px;
+//     }
+//
+//     h5 {
+//         color: #fff;
+//         padding-top: 20px;
+//     }
+// }
 
-    i.back {
-        font-size: 38px;
-        padding-top: 0px;
-    }
-
-    h5 {
-        color: #fff;
-        padding-top: 20px;
-    }
-
-    }
-
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+  background-color: inherit;
+}
 
 .cover-heading {
-    color: #fff;
-    padding-top: 30vh;
-
-    span {
-        -webkit-animation: color-change 3.5s infinite;
-        -moz-animation: color-change 3.5s infinite;
-        -o-animation: color-change 3.5s infinite;
-        -ms-animation: color-change 3.5s infinite;
-        animation: color-change 3.5s infinite;
-
-
-        @-webkit-keyframes color-change {
-            0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-moz-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-ms-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @-o-keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-        @keyframes color-change {
-             0% { color: $pink; }
-            50% { color: $purple; }
-            100% { color: $turquoise; }
-        }
-    }
+  padding: 0;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
+
+@media (max-width: 766px)
+{
+    .cover-heading
+    {
+        height: 150px;
+    }
+
+}
+
+.gnomelee {
+  height: inherit;
+  display: block;
+}
+
+.gnomelee-thumb {
+  height: inherit;
+  display: block;
+}
+
+.gnomelee-hide {
+  display: none;
+}
+
+.guiding {
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: normal;
+}
+
+:focus {
+  outline: none;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  -webkit-box-shadow: inset 0px 0px 30px $purple;
+  box-shadow: inset 0px 0px 30px $purple;
+}
+
+.contact-form {
+  position: fixed;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  z-index: 2000;
+  box-shadow: 2px 2px 9px #888888;
+
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: thin dotted;
+  outline: none;
+  outline-offset: -2px;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  color: white;
+  background-color: #523795;
+  border-color: white;
+}
+
+.contact-form-hidden {
+  display: none;
+}
+
+.contact-form-show {
+  display: block;
+}
+
+abbr {
+  display: none;
+}
+
+.send-button {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  float: right;
+  text-transform: lowercase;
+  font-weight: normal;
+  padding: 0;
+  font-size: 25px;
+  line-height: 100%;
+  padding: 3px 3px 3px 3px;
+}
+
+.contact-btn,
+.success-btn {
+  top: 0;
+  left: 0;
+  float: left;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: fixed;
+  text-transform: lowercase;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1998;
+  border-radius: 2px;
+  padding: 3px 3px 3px 3px;
+  width: 108.86px;
+  line-height: 100%;
+  box-shadow: 2px 2px 9px #888888;
+}
+
+.contact-form a{
+  color: white;
+  float: right;
+  border: none;
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+  padding: 0;
+  border: 2px solid white;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 0 0 white;
+  box-shadow: inset 0 0 0 white;
+  font-size: 23px;
+  color: white;
+}
+
+.form-control:focus {
+  border-color: white;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    float: right;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-right: 16px;
+    display: block;
+    text-align: right;
+}
+
+.show-links {display: block;}
+
+.link-underline {
+  border-bottom: 3px solid $purple;
+}
+
+
+.pillar-img {
+  text-align: center;
+  height: inherit;
+  margin: auto;
+}
+
+.five-columns-row {
+  background-color: transparent;
+  height: 200px;
+  margin-top: 55px;
+}
+
+.five-columns-img {
+  height: inherit;
+
+}
+
+.hidden-text {
+  font-size: 15px;
+  height: 200px;
+  font-family: 'typewcond', $font-stack;
+  text-align: center;
+  position: relative;
+}
+
+.hidden-box {
+  display: none;
+  height: inherit;
+}
+
+.show-text {
+  display: block;
+  position: relative;
+}
+
+.five-columns {
+  margin-top: 100px;
+}
+
+.nav-margin {
+  margin-top: 0px;
+}
+
+.interests {
+  height: 200px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.interest-holder {
+  height: inherit;
+  margin-bottom: 35px;
+}
+
+.interest-img {
+  height: inherit;
+  cursor: pointer;
+  width: 135px;
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.interested-row {
+  height: 100px;
+  position: relative;
+  clear: both;
+  text-align: center;
+}
+
+.interested {
+  position: absolute;
+  text-align: center;
+  font-size: 38px;
+}
+
+.contact-padding {
+  margin-left: 12px;
+}
+
+
+// .cover-heading {
+//     color: #fff;
+//     padding-top: 30vh;
+//
+//     span {
+//         -webkit-animation: color-change 3.5s infinite;
+//         -moz-animation: color-change 3.5s infinite;
+//         -o-animation: color-change 3.5s infinite;
+//         -ms-animation: color-change 3.5s infinite;
+//         animation: color-change 3.5s infinite;
+//
+//
+//         @-webkit-keyframes color-change {
+//             0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-moz-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-ms-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @-o-keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//         @keyframes color-change {
+//              0% { color: $pink; }
+//             50% { color: $purple; }
+//             100% { color: $turquoise; }
+//         }
+//     }
+// }
 
 .fade-in {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -583,7 +879,7 @@ text-align: center;
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
-    
+
 
     @keyframes fadein {
         from { opacity: 0; }
@@ -614,12 +910,12 @@ text-align: center;
         to   { opacity: 1; }
     }
     }
-    
+
 
 @media (max-width: 768px) {
-    .cover-heading {
-        padding-top: 15vh;
-    }
+    // .cover-heading {
+    //     padding-top: 15vh;
+    // }
     .logo {
     margin-top: 15px;
     height: 45px;
@@ -641,7 +937,7 @@ text-align: center;
         text-align: center
     }
 
-    
+
 }
 
 .fp-nav {
@@ -649,7 +945,7 @@ text-align: center;
 }
 
 .white {
-    color: #fff;    
+    color: #fff;
 }
 
 
@@ -669,7 +965,7 @@ a {
     linear-gradient(150deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
     linear-gradient(30deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
     linear-gradient(150deg, #7A4BF8 12%, transparent 12.5%, transparent 87%, #7A4BF8 87.5%, #7A4BF8),
-    linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8), 
+    linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8),
     linear-gradient(60deg, #7A4BF8 25%, transparent 25.5%, transparent 75%, #7A4BF8 75%, #7A4BF8);
     background-size:80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
@@ -697,7 +993,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
         color: #fff;
     }
 
-        
+
 }
 
 .fp-ht {
@@ -705,14 +1001,14 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 .fp-first {
-   
+
 }
 @media (max-width: 991px) {
 .fp-ht {
     min-height: 375px;
     }
 .fp-first {
-   
+
     min-height: 700px;
 }
 }
@@ -731,7 +1027,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 
 @media (max-width: 500px) {
     .fp-ht {
-  
+
     min-height: 550px;
     }
 
@@ -762,7 +1058,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     padding: 20px;
     font-size: 150px;
     background-color: #CB8EBE;
-    
+
 }
 
 
@@ -793,7 +1089,7 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
 }
 
 
- .cogs, .thumb, .rocket, .signs, .ring {   
+ .cogs, .thumb, .rocket, .signs, .ring {
     border-radius: 50%;
     color: white;
     display: inline-block;
@@ -836,13 +1132,15 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
     text-transform: uppercase;
     color: #fff;
     font-size: 17px;
+    width: 145px;
+    text-align: center;
 }
 
 
 .navbar-btn {
+    border-radius: 5px;
+    background-color: black;
     height: 40px;
-
-
 }
 
 .navbar-nav > li > a {
@@ -866,7 +1164,3 @@ background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, F
       -webkit-text-fill-color: transparent;
     }
 }
-
-
-
-

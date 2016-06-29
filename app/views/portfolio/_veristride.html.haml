@@ -1,0 +1,49 @@
+.modal-dialog.modal-dialog-portfolio
+  .modal-content.modal-content-portfolio
+    .modal-header
+    .modal-body
+      .container
+
+        %div.row.portfolio-row
+          .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
+            = image_tag('back-btn.png', :class => "back-btn img-responsive")
+          .col-md-11.col-xs-9.title
+            %a{:href => 'http://www.veristride.com/', :target => '_blank'}
+              = image_tag 'veristride.png', :class => 'company-img img-responsive', :style => "height: 55px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'check out our site!'
+
+        %div.row.details
+          %div.col-md-6.div.col-xs-12.details-text
+
+            %h4.headings veristride
+            %p.paragraphs
+
+            %h4.headings project overview
+            %p.paragraphs Veristride needed an IOS app to take their data garter by smart insoles and display it to users
+
+            %h4.headings work
+            %p.paragraphs Mobile App Design
+
+            %h4.headings services
+            %p.paragraphs Internet of Things, Mobile and Enterprise <br> Software Development, Strategy <br> Impact Measurement, Design
+
+          %div.col-md-6.col-xs-12.details-gallery
+            #myCarousel.carousel.slide{"data-ride" => "carousel"}
+              / Indicators
+              %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+
+
+              / Wrapper for slides
+              .carousel-inner{:role => "listbox"}
+                .item.active
+                  = image_tag 'veristridemobile.png'
+
+              / Left and right controls
+              %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-left.black{"aria-hidden" => "true"}
+                %span.sr-only Previous
+              %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-right.black{"aria-hidden" => "true"}
+                %span.sr-only Next
+
+    .modal-footer

@@ -1,0 +1,74 @@
+.hank {
+  background-image: url('hamstertest.jpeg');
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 2px 2px 18px #888888;
+  cursor: pointer;
+}
+
+.pic {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 38px;
+}
+
+.close {
+  font-size: 75px;
+  font-weight: 300;
+  margin-top: 11px;
+  margin-right: 4px;
+  line-height: 24px;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.team-row {
+}
+
+.exis {
+}
+
+.modal-dialog-team {
+  margin-top: 100px;
+}
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.modal-content-team {
+  border-top-left-radius: 80px;
+  border: 2px solid black;
+}
+
+.modal-row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 25px;
+}
+
+.modal-header-team {
+  padding: 0;
+}
+
+.modal-body-team {
+  padding-top: 0;
+}
+
+.team-project-div{
+  width : 150px;
+  height : 150px;
+  display : table-cell;
+  vertical-align : middle;
+  float:none;
+}
+
+.team-project-img {
+
+}
