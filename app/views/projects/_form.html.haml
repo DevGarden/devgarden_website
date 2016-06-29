@@ -6,9 +6,9 @@
       Client: 
       %b= @project.client.name
     = f.input :name
-    = f.input :github_repo
-    = f.input :jira_project_id
-    = f.input :toggle_project_id
+    = f.input :description, as: :text
+    = f.input :trello_project_id
+    = f.input :toggl_project_id
     = f.input :google_drive_url
 
   .form-actions

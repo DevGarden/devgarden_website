@@ -74,16 +74,13 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  
+
   # Do not dump schema after migrations.
+
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { :host => 'dgsite.herokuapp.com' }
-  ActionMailer::Base.smtp_settings = {
-  :address        => 'smtp.sendgrid.net',
-  :port           => '587',
-  :authentication => :plain,
-  :user_name      => ENV['SENDGRID_USERNAME'],
-  :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => 'devgarden.io',
-  :enable_starttls_auto => true
-}
+  config.action_mailer.default_url_options = { :host => 'devgarden.io' }
+
+  # Google Analytics
+  GA.tracker = "UA-75683065-1"
 end

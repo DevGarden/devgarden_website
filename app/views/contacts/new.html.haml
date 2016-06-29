@@ -1,25 +1,27 @@
-%div.cover-container
-  .container
-    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-      %span.sr-only Toggle navigation
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    .navbar-brand.logo
-      = link_to image_tag('dg_logo.png'), root_path
-    
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right  
-        %li 
-          = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
-  
-  .col-md-6.col-md-offset-3.panel.registrations.top
-    %h3 Send Us a Message
-    = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
-      = f.input :name, :required => true
-      = f.input :email, :required => true
-      = f.input :message, :as => :text, :required => true
-      .hidden
-        = f.input :nickname, :hint => 'Leave this field blank!'
-      %div
-        = f.button :submit, 'Send message', :class=> "btn btn-primary"
+-#
+-# %button.btn.contact-btn{ "id" => "contact-us" }
+-#   = link_to 'Back', root_path
+
+  / .collapse.navbar-collapse
+  /   %ul.nav.navbar-nav.navbar-right
+  /     %li
+  /       = link_to 'Sign in', "#sign-in", :class => 'btn btn-lg sign-in btn-warning pull-right navbar-btn', "data-toggle" => "modal"
+
+
+= simple_form_for @contact, :html => {:class => 'form-inline col-md-3 col-xs-8' } do |f|
+  = f.input :name, :required => true
+  = f.input :message, :as => :text, :required => true
+  = f.input :email, :required => true
+  = f.button :submit, 'send away', :class => "btn send-button"
+  .hidden
+    = f.input :nickname, :hint => 'Leave this field blank!'
+
+
+/ #sign-in.modal.fade{"aria-labelledby" => "sign-in", :role => "dialog", :tabindex => "-1"}
+/   .modal-dialog{:role => "document"}
+/     .modal-content
+/       .modal-header
+/         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+/           %span{"aria-hidden" => "true"} &times;
+/       .modal-body
+/         = render 'layouts/signin'

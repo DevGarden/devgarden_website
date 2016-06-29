@@ -49,6 +49,8 @@ gem 'hashie'
 #seeding database with shit
 gem 'faker',        '1.4.2'
 
+gem 'google-analytics-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -62,6 +64,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -72,6 +75,8 @@ gem 'net-ssh', '~> 2.6'
 gem 'yui-compressor'
 
 gem 'skrollr-rails'
+
+gem 'ruby-trello'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -85,12 +90,14 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 
-  gem 'capistrano'
-  gem 'capistrano3-puma'
+  gem 'capistrano', '~> 3.1'
   gem 'capistrano-bundler'
-  gem 'capistrano-rails', '~> 1.1.3'
+  gem 'capistrano3-nginx', '~> 2.0'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', github: 'betesh/rails-1', branch: 'master'
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm', '~> 0.1.1'
+
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
@@ -110,5 +117,3 @@ end
 group :production do
   gem 'rails_12factor', '0.0.2'
 end
-
-

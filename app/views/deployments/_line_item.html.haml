@@ -1,0 +1,44 @@
+.deployment{"data-id" =>  d.id, "data-url" => d.build_url}
+  .col-md-3
+    =link_to d.phase.to_s, d.build_url, class: "btn btn-sm #{d.staging? ? 'btn-warning' : 'btn-success'}", target: "_blank"
+  .col-md-9
+    .deployment-status{style:"align: left;"}
+      =image_tag "loading.gif", style:"width: 20px; height: 20px;"
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+-unless @deployment_script_added
+  -@deployment_script_added = true
+
+  :javascript
+    $(document).ready( function() {
+      $(".deployment").each(function() {
+        //debugger;
+        var deployment_id = $(this).data("id"); 
+        get_deployment_status(deployment_id);
+      });
+    });
+
+    function get_deployment_status(deployment_id) {
+      $.ajax( { url: "/deployments/" +deployment_id +"/check_server_status.json", success: on_status });
+    }
+
+    function on_status(data) {
+      var id = data["id"];
+      var status = data["status"];
+      var div = $(".deployment[data-id=" + id + "] .deployment-status");
+      if (status == -1) 
+        div.html(data["error_message"]);
+      else
+        div.html(status);
+    }

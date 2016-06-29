@@ -1,8 +1,13 @@
-%h2 Forgot your password?
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Send me reset password instructions"
-= render "devise/shared/links"
+
+.col-md-12.top
+  .panel.registrations.sign-in-form
+    .container.edit-act
+      = link_to "<h4 class='white'>back</h4>".html_safe, root_path
+      %h2.white forgot your password?
+      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.email_field :email, :autofocus => true, class: 'form-control', :placeholder => 'email'
+        .form-actions.buffer
+          = f.button :submit, "send me reset password instructions", :class => 'btn-default sign-in-btn'
+      = render "devise/shared/links"

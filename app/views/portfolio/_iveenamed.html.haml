@@ -1,0 +1,48 @@
+.modal-dialog.modal-dialog-portfolio
+  .modal-content.modal-content-portfolio
+    .modal-header
+    .modal-body
+      .container
+
+        %div.row.portfolio-row
+          .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
+            = image_tag('back-btn.png', :class => "back-btn img-responsive")
+          .col-md-11.col-xs-9.company-div.title
+            %a{:href => 'http://iveenamed.com/', :target => '_blank'}
+              = image_tag 'iveenamedlogo.png', :class => 'company-img img-responsive', :style => "height: 55px", 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'this is a tooltip?'
+
+        %div.row.details
+          %div.col-md-6.div.col-xs-12.details-text
+
+            %h4.headings iveena
+            %p.paragraphs
+
+            %h4.headings project overview
+            %p.paragraphs iVeena uses novel approaches - including drug delivery from the lens capsule, minimally invasive implants and intracellular therapy to reach target tissues for better patient outcomes.
+
+            %h4.headings services
+            %p.paragraphs Business Services <br> Innovation Accelerator <br> Impact Measurement
+
+          %div.col-md-6.col-xs-12.details-gallery
+            #myCarousel.carousel.slide{"data-ride" => "carousel"}
+              / Indicators
+              %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+                %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+
+              / Wrapper for slides
+              .carousel-inner{:role => "listbox"}
+                .item.active
+                  = image_tag 'iveenavisual.png'
+                .item
+                  = image_tag 'iveenamedlogo.jpeg'
+
+              / Left and right controls
+              %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-left.black{"aria-hidden" => "true"}
+                %span.sr-only Previous
+              %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-right.black{"aria-hidden" => "true"}
+                %span.sr-only Next
+
+    .modal-footer

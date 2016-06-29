@@ -1,0 +1,52 @@
+.modal-dialog.modal-dialog-portfolio
+  .modal-content.modal-content-portfolio
+    .modal-header
+    .modal-body
+      .container
+
+        %div.row.portfolio-row
+          .col-md-1.col-xs-3.back-img{"data-dismiss" => "modal", :type => "button"}
+            = image_tag('back-btn.png', :class => "back-btn img-responsive")
+          .col-md-11.col-xs-9.company-div.title
+            = image_tag 'digitaldensitylogo.png', :class => 'company-img img-responsive', :style => "height: 195px"
+
+
+        %div.row.details
+          %div.col-md-6.div.col-xs-12.details-text
+
+            %h4.headings digital density
+            %p.paragraphs
+
+            %h4.headings project overview
+            %p.paragraphs Creating a user device that enables companies to map out the digital density inside of a space; allowing the company to monitor energy output, usage, and how the devices are working together.
+
+            %h4.headings work
+            %p.paragraphs Device to map out digital density of workforce
+
+            %h4.headings services
+            %p.paragraphs Developing Hardware & Software <br> Valuation, Service Offering Development
+
+            -# = link_to 'download white paper', portfolio_path("digitaldensity"), :class => "btn white-paper-button left-button", :remote => true
+
+
+          %div.col-md-6.col-xs-12.details-gallery
+            #myCarousel.carousel.slide{"data-ride" => "carousel"}
+              / Indicators
+              %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+
+              / Wrapper for slides
+              .carousel-inner{:role => "listbox"}
+                .item.active
+                  = image_tag 'digitaldensitylogo.png'
+
+              / Left and right controls
+              %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-left.black{"aria-hidden" => "true"}
+                %span.sr-only Previous
+              %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+                %span.glyphicon.glyphicon-chevron-right.black{"aria-hidden" => "true"}
+                %span.sr-only Next
+
+
+    .modal-footer
