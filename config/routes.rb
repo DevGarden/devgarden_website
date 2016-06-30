@@ -33,8 +33,6 @@ Rails.application.routes.draw do
   end
 
   get 'home/index'
-  get 'contact' => 'contacts#new'
-
   get '/team', to: 'team#index'
 
   resources 'portfolio', only: [:index, :show]

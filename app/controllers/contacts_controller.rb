@@ -5,6 +5,8 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
+    puts "SENDGRID_USERNAME: #{ENV['SENDGRID_USERNAME']}"
+    puts "SENDGRID_PASSWORD: #{ENV['SENDGRID_PASSWORD']}"
     if @contact.save
       render "thumbs_up"
     else
