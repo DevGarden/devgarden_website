@@ -3,6 +3,7 @@
 
 set :application, 'devgarden_website'
 set :repo_url, 'git@github.com:DevGarden/devgarden_website.git'
+set :branch, ENV['BRANCH'] || :master
 
 set :ssh_options,     { forward_agent: true, user: fetch(:user), 
                         keys: %w(~/.ssh/devgarden.pem), auth_methods: %w(publickey)}
