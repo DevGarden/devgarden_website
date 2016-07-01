@@ -4,7 +4,7 @@
 = render 'contacts/form'
 
 
-%button.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
+%div.dropdown.hamburger.hamburger--3dx{"tabindex" => "0", "role" => "button"}
   %div.hamburger-box
     %div.hamburger-inner
   %div.dropdown-content
@@ -25,29 +25,30 @@
 %h2.black.guiding.center guiding clients to a digital future
 
 
-%div.row.five-columns-row
-  %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
-    = image_tag "business_services.png", :class => "img-responsive pillar-img"
-  %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
-    = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
-  %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
-    = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
-  %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
-    = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
-  %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
-    = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
+.container
+  %div.row.five-columns-row
+    %div.col-md-2.col-xs-6.col-md-offset-1.five-columns-img{ "id" => "image_1"}
+      = image_tag "business_services.png", :class => "img-responsive pillar-img"
+    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_2" }
+      = image_tag "experiencedesign.png", :class => "img-responsive pillar-img"
+    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_3" }
+      = image_tag "softwareengineering.png", :class => "img-responsive pillar-img"
+    %div.col-md-2.col-xs-6.five-columns-img{ "id" => "image_4" }
+      = image_tag "innovation_accelerator.png", :class => "img-responsive pillar-img"
+    %div.col-md-2.col-xs-12.five-columns-img{ "id" => "image_5" }
+      = image_tag "impactmanagement.png", :class => "img-responsive pillar-img"
 
-%div.row.hidden-text.hidden-xs.hidden-sm
-  %div.col-md-2.col-md-offset-1
-    %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
-  %div.col-md-2
-    %p.hidden-box{ 'id' => 'hidden-text2'} We rapidly model, prototype and iterate solutions.
-  %div.col-md-2
-    %p.hidden-box{ 'id' => 'hidden-text3'} We integrate development with experienced design to reduce errors and improve velocity.
-  %div.col-md-2
-    %p.hidden-box{ 'id' => 'hidden-text4'} We can help value and finance your business, develop your products and connect them to your consumers.
-  %div.col-md-2
-    %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
+  %div.row.hidden-text.hidden-xs.hidden-sm
+    %div.col-md-2.col-md-offset-1
+      %p.hidden-box{ 'id' => 'hidden-text1'} We act as a force multiplier for your business by providing strategic consulting, solution vetting and change management.
+    %div.col-md-2
+      %p.hidden-box{ 'id' => 'hidden-text2'} We rapidly model, prototype and iterate solutions.
+    %div.col-md-2
+      %p.hidden-box{ 'id' => 'hidden-text3'} We integrate development with experienced design to reduce errors and improve velocity.
+    %div.col-md-2
+      %p.hidden-box{ 'id' => 'hidden-text4'} We can help value and finance your business, develop your products and connect them to your consumers.
+    %div.col-md-2
+      %p.hidden-box{ 'id' => 'hidden-text5'} We tie the results to the objectives and seek opportunities for continuous improvement.
 
 .container
 

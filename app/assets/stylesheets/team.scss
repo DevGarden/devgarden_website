@@ -18,15 +18,20 @@
 }
 
 .close {
-  font-size: 75px;
-  font-weight: 300;
-  margin-top: 11px;
-  margin-right: 4px;
-  line-height: 24px;
-  opacity: 0.6;
+  opacity: 1;
+  font-size: 58px;
+  line-height: 43px;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 3px;
+}
+
+.exis {
+  padding-top: 7px;
 }
 
 .team-row {
@@ -36,7 +41,7 @@
 }
 
 .modal-dialog-team {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .modal-backdrop {
   background-color: transparent;
