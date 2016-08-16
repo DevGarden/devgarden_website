@@ -13,7 +13,9 @@ module DevgardenHome
     # -- all .rb files in that directory are automatically loaded.
 
     config.generators do |g|
-      g.orm :active_record
+      g.orm :active_record     
+      g.assets false
+      g.helper false
       g.test_framework :rspec,
         fixtures: true,
         view_specs: false,
